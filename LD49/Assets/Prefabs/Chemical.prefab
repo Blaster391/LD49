@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2586644000666740674}
   - component: {fileID: 2586644000666740675}
   - component: {fileID: 5719852504588296432}
+  - component: {fileID: 577179709416976410}
+  - component: {fileID: 8046329650281049752}
+  - component: {fileID: 2604139802847944841}
   m_Layer: 0
   m_Name: Chemical
   m_TagString: Untagged
@@ -104,3 +107,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &577179709416976410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3b9e6f6f204b746be2a108db2c617f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_state: {fileID: 11400000, guid: 685de268d9f3c084aab374f18b2d550a, type: 2}
+--- !u!114 &8046329650281049752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4b81f866a34324fb5dc2905a4c932b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2604139802847944841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b4a3c20e70ddd4e97513818006669a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_spriteRenderer: {fileID: 2586644000666740675}
