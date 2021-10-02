@@ -53,14 +53,15 @@ public class GrabManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            int layer = 8;
-            int layerMask = (1 << layer);
-            layerMask = ~layerMask;
+        int layer = 8;
+        int layerMask = (1 << layer);
 
-            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D result = Physics2D.OverlapPoint(mouseWorld);
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D result = Physics2D.OverlapPoint(mouseWorld, layerMask);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+
 
             m_grabbable = result?.transform?.gameObject?.GetComponent<Grabbable>();
             if(m_grabbable != null)
@@ -74,6 +75,8 @@ public class GrabManager : MonoBehaviour
             m_grabbable.EndGrab();
             m_grabbable = null;
         }
+
+
 
     }
 }
