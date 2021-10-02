@@ -22,6 +22,9 @@ public class Grabbable : MonoBehaviour
     private float m_originalLinearDrag = 0.0f;
     private float m_originalAngularDrag = 0.0f;
 
+    private bool m_travellingRight = false;
+    private float m_previousZDirection = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +63,7 @@ public class Grabbable : MonoBehaviour
                 }
                 else
                 {
-                    rotationForce = (Mathf.Clamp(-Input.mouseScrollDelta.y * m_manager.ScrollWheelAdditive, -2.0f, 2.0f) * m_manager.RotateForce);
+                    rotationForce = (Mathf.Clamp(-Input.mouseScrollDelta.y * m_manager.ScrollWheelAdditive, -m_manager.ScrollWheelAdditive, m_manager.ScrollWheelAdditive) * m_manager.RotateForce);
                 }
 
                 rotationForce *= Time.deltaTime * 100.0f;
@@ -69,21 +72,42 @@ public class Grabbable : MonoBehaviour
             }
             else
             {
-                float rotationForce = m_manager.RotateForce;
-
                 Vector2 lookPos = mouseWorld - targetPoint;
-                float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
+                float angle = Mathf.Atan2(lookPos.x, lookPos.y) * Mathf.Rad2Deg;
 
-                float zDirection = m_parent.transform.rotation.eulerAngles.z;
+                if(angle < 0)
+                {
+                    angle += 360.0f;
+                }
 
-                float delta = angle - zDirection;
+                var eulerAngles = m_parent.transform.rotation.eulerAngles;
+                float zDirection = -eulerAngles.z;
+                if (zDirection < 0)
+                {
+                    zDirection += 360.0f;
+                }
+
+                float delta = zDirection - angle;
+
+                if (Mathf.Abs(delta) > 180.0f)
+                {
+                    delta = -delta;
+                }
+
                 delta /= 360.0f;
 
 
-                Debug.Log($"{angle} - {zDirection}");
 
-                rotationForce *= Time.deltaTime * 100.0f;
+                delta = Mathf.Clamp(delta, -1.0f, 1.0f);
+
+                Debug.Log($"{angle} - {zDirection} ({delta})");
+
+                float rotationForce = m_manager.RotateForce * delta * Time.deltaTime * 100.0f;
                 m_parentRigidbody.AddTorque(rotationForce);
+
+                m_travellingRight = m_parentRigidbody.angularVelocity > 0.0f;
+                m_previousZDirection = zDirection;
+
             }
 
 
