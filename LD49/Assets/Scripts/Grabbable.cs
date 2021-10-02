@@ -11,28 +11,8 @@ public class Grabbable : MonoBehaviour
     private Rigidbody2D m_parentRigidbody;
     private Vector3 m_grabbedPosition = Vector3.zero;
     private Vector2 m_centreOfMass = Vector2.zero;
+    private GrabManager m_manager = null;
 
-    [SerializeField]
-    private float m_rotateForce = 500.0f;
-
-    [SerializeField]
-    private float m_scrollWheelAdditive = 100.0f;
-
-    [SerializeField]
-    private float m_linearDrag = 1.0f;
-
-    [SerializeField]
-    private float m_angularDrag = 1.0f;
-
-    [SerializeField]
-    private float m_threshold = 0.1f;
-
-    [SerializeField]
-    private float m_minimumForce = 1000.0f;
-    [SerializeField]
-    private float m_maximumForce = 5000.0f;
-    [SerializeField]
-    private float m_maximumForceDistance = 100.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +21,8 @@ public class Grabbable : MonoBehaviour
         m_parentRigidbody = m_parent.GetComponent<Rigidbody2D>();
 
         m_centreOfMass = m_parentRigidbody.centerOfMass;
+
+        m_manager = GetComponentInParent<GrabManager>();
     }
 
     // Update is called once per frame
@@ -57,25 +39,25 @@ public class Grabbable : MonoBehaviour
             float rotationForce = 0.0f;
             if (Input.GetKey(KeyCode.Q))
             {
-                rotationForce = (1.0f * m_rotateForce);
+                rotationForce = (1.0f * m_manager.RotateForce);
             }
             else if (Input.GetKey(KeyCode.E))
             {
-                rotationForce = (-1.0f * m_rotateForce);
+                rotationForce = (-1.0f * m_manager.RotateForce);
             }
             else
             {
-                rotationForce = (Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
+                rotationForce = (Input.mouseScrollDelta.y * m_manager.RotateForce * m_manager.ScrollWheelAdditive);
             }
 
             m_parentRigidbody.AddTorque(rotationForce);
 
             float distance = forceDirection.magnitude;
             forceDirection.Normalize();
-            if (distance > m_threshold)
+            if (distance > m_manager.Threshold)
             {
-                float force = Mathf.Lerp(m_minimumForce, m_maximumForce, distance / m_maximumForceDistance);
-                force = Mathf.Clamp(force, m_minimumForce, m_maximumForce);
+                float force = Mathf.Lerp(m_manager.MinimumForce, m_manager.MaximumForce, distance / m_manager.MaximumForceDistance);
+                force = Mathf.Clamp(force, m_manager.MinimumForce, m_manager.MaximumForce);
 
                 m_parentRigidbody.AddForce(forceDirection * force);
             }
@@ -92,8 +74,8 @@ public class Grabbable : MonoBehaviour
 
         m_grabbed = true;
         m_parentRigidbody.gravityScale = 0.0f;
-        m_parentRigidbody.drag = m_linearDrag;
-        m_parentRigidbody.angularDrag = m_angularDrag;
+        m_parentRigidbody.drag = m_manager.LinearDrag;
+        m_parentRigidbody.angularDrag = m_manager.AngularDrag;
 
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
