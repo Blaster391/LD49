@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
@@ -199,6 +203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (12)
@@ -532,6 +540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
@@ -627,6 +639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (11)
@@ -718,6 +734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (3)
@@ -1007,6 +1027,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (2)
@@ -1098,6 +1122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (10)
@@ -1163,6 +1191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
@@ -1315,6 +1347,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_Name
       value: Chemical (1)
@@ -1500,6 +1536,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
@@ -1569,6 +1609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
@@ -1685,6 +1729,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2047672886}
     m_Modifications:
+    - target: {fileID: 513163162468620303, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
+      propertyPath: m_vibrationForce
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 577179709416976410, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_state
       value: 
