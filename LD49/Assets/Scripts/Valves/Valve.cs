@@ -21,7 +21,6 @@ public class Valve : MonoBehaviour
         var rigidbody = gameObject.GetComponent<Rigidbody2D>();
         float rotation = 0.0f;
 
-        var eulerAngles = transform.eulerAngles;
         if(m_startEnabled || (!m_startEnabled && m_invert))
         {
             rotation = -m_maxRotation + 1;

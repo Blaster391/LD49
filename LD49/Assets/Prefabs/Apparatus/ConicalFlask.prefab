@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4615442908628103382}
   - component: {fileID: 4615442908628103381}
   - component: {fileID: 4615442908628103380}
+  - component: {fileID: 1925286585310039177}
   m_Layer: 0
   m_Name: ConicalFlask
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4615442908735267749}
+  - {fileID: 1635553412346863515}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,6 +186,18 @@ PolygonCollider2D:
       - {x: 0.79999995, y: -1.1899999}
       - {x: 0.85999995, y: -1.16}
       - {x: 0.96999997, y: -1.05}
+--- !u!114 &1925286585310039177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615442908628103379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794cf21e1ac9b6a4ba2e6e24826b5e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4615442908735267748
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758300660f4cefd42b4fcc3e420e5f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_adjustCentreOfMass: 1
+  m_rotateOnGrab: 0
 --- !u!60 &4615442908735267750
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -239,6 +255,83 @@ PolygonCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.50473714, y: 1.1971412}
+      - {x: -0.47152478, y: 0.021297723}
+      - {x: -1.041482, y: -0.8930353}
+      - {x: -0.81824696, y: -1.228147}
+      - {x: 0.80786204, y: -1.2202377}
+      - {x: 1.0474402, y: -0.9082029}
+      - {x: 0.47219515, y: 0.03498125}
+      - {x: 0.48423052, y: 1.186929}
+--- !u!1 &4625582331878818995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635553412346863515}
+  - component: {fileID: 8075987540818471180}
+  - component: {fileID: 78317341225617230}
+  m_Layer: 0
+  m_Name: Contents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635553412346863515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625582331878818995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4615442908628103383}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8075987540818471180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625582331878818995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966ae994a8a8aa549a3eb544472daf9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &78317341225617230
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625582331878818995}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

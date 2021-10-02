@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &544997265193370371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2981250202736163557}
+  - component: {fileID: 608997825260927730}
+  - component: {fileID: 934903377816337849}
+  m_Layer: 0
+  m_Name: Contents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2981250202736163557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544997265193370371}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8888194171916671711}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608997825260927730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544997265193370371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966ae994a8a8aa549a3eb544472daf9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &934903377816337849
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544997265193370371}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9726801, y: 1}
+      - {x: -1.0082731, y: 1.0070579}
+      - {x: -0.92665243, y: -0.79976654}
+      - {x: -0.7708778, y: -1.0149964}
+      - {x: 0.5191256, y: -1.0493262}
+      - {x: 0.91672707, y: -0.9039726}
 --- !u!1 &8888194171916671699
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +87,7 @@ GameObject:
   - component: {fileID: 8888194171916671708}
   - component: {fileID: 8888194171916671709}
   - component: {fileID: 8888194171916671698}
+  - component: {fileID: 1144958001409830868}
   m_Layer: 0
   m_Name: Beaker
   m_TagString: Untagged
@@ -31,6 +107,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8888194172019631290}
+  - {fileID: 2981250202736163557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,6 +223,18 @@ PolygonCollider2D:
       - {x: 0.91499996, y: -0.94}
       - {x: 0.995, y: 0.13}
       - {x: 0.995, y: 1.01}
+--- !u!114 &1144958001409830868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888194171916671699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794cf21e1ac9b6a4ba2e6e24826b5e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8888194172019631291
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,3 +310,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758300660f4cefd42b4fcc3e420e5f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_adjustCentreOfMass: 1
+  m_rotateOnGrab: 0
