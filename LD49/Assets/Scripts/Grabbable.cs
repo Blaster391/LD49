@@ -86,6 +86,8 @@ public class Grabbable : MonoBehaviour
 
     public void StartGrab()
     {
+        Cursor.visible = false;
+
         Debug.Log(m_parent.name + " Grabbed");
 
         m_grabbed = true;
@@ -106,6 +108,8 @@ public class Grabbable : MonoBehaviour
 
     public void EndGrab()
     {
+        Cursor.visible = true;
+
         Debug.Log(m_parent.name + " Dropped");
 
         m_grabbed = false;

@@ -77,10 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758300660f4cefd42b4fcc3e420e5f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementForce: 15000
+  m_movementForce: 25000
   m_rotateForce: 1000
   m_scrollWheelAdditive: 100
-  m_linearDrag: 10
+  m_linearDrag: 7
   m_angularDrag: 2.5
   m_threshold: 0.25
 --- !u!1 &7631918174965499234
