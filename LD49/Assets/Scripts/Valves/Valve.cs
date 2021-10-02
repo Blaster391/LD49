@@ -13,6 +13,28 @@ public class Valve : MonoBehaviour
     [SerializeField]
     private float m_maxRotation = 355.0f;
 
+    [SerializeField]
+    private bool m_startEnabled = false;
+
+    public void Start()
+    {
+        var rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        float rotation = 0.0f;
+
+        var eulerAngles = transform.eulerAngles;
+        if(m_startEnabled || (!m_startEnabled && m_invert))
+        {
+            rotation = -m_maxRotation + 1;
+        }
+        else
+        {
+            rotation = -m_minRotation - 1;
+        }
+
+
+        rigidbody.rotation = rotation;
+    }
+
     public float GetValveProp()
     {
         var eulerAngles = transform.rotation.eulerAngles;

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8658437206048829719}
   - component: {fileID: 7163598255885494096}
   - component: {fileID: 513163162468620303}
+  - component: {fileID: 5256494963977612534}
   m_Layer: 0
   m_Name: Chemical
   m_TagString: Untagged
@@ -246,3 +247,19 @@ MonoBehaviour:
   m_vibrationForceMultiplierMax: 1
   m_vibrationMinTime: 0.01
   m_vibrationMaxTime: 0.02
+--- !u!58 &5256494963977612534
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.16
