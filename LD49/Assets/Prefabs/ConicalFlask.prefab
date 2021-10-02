@@ -79,10 +79,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_movementForce: 25000
   m_rotateForce: 1000
-  m_scrollWheelAdditive: 100
-  m_linearDrag: 7
+  m_scrollWheelAdditive: 10
+  m_linearDrag: 8
   m_angularDrag: 2.5
   m_threshold: 0.25
+  m_minimumForce: 500
+  m_maximumForce: 20000
+  m_maximumForceDistance: 35
 --- !u!1 &7631918174965499234
 GameObject:
   m_ObjectHideFlags: 0

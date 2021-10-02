@@ -6,19 +6,11 @@ using System.Runtime.InteropServices;
 
 public class Grabbable : MonoBehaviour
 {
-
-    [DllImport("user32.dll")]
-    static extern bool SetCursorPos(int X, int Y);
-
     private bool m_grabbed = false;
     private GameObject m_parent;
     private Rigidbody2D m_parentRigidbody;
-    private Vector3 m_clickPoint = Vector3.zero;
     private Vector3 m_grabbedPosition = Vector3.zero;
     private Vector2 m_centreOfMass = Vector2.zero;
-
-    [SerializeField]
-    private float m_movementForce = 10000.0f;
 
     [SerializeField]
     private float m_rotateForce = 500.0f;
@@ -35,6 +27,13 @@ public class Grabbable : MonoBehaviour
     [SerializeField]
     private float m_threshold = 0.1f;
 
+    [SerializeField]
+    private float m_minimumForce = 1000.0f;
+    [SerializeField]
+    private float m_maximumForce = 5000.0f;
+    [SerializeField]
+    private float m_maximumForceDistance = 100.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,13 +49,10 @@ public class Grabbable : MonoBehaviour
         if(m_grabbed)
         {
 
-
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Vector3 targetPoint = m_parent.transform.TransformPoint(m_grabbedPosition);
             Vector2 forceDirection = mouseWorld - targetPoint;
-
-
 
             float rotationForce = 0.0f;
             if (Input.GetKey(KeyCode.Q))
@@ -74,10 +70,14 @@ public class Grabbable : MonoBehaviour
 
             m_parentRigidbody.AddTorque(rotationForce);
 
-            if (forceDirection.magnitude > m_threshold)
+            float distance = forceDirection.magnitude;
+            forceDirection.Normalize();
+            if (distance > m_threshold)
             {
-                forceDirection.Normalize();
-                m_parentRigidbody.AddForce(forceDirection * m_movementForce * 0.1f);
+                float force = Mathf.Lerp(m_minimumForce, m_maximumForce, distance / m_maximumForceDistance);
+                force = Mathf.Clamp(force, m_minimumForce, m_maximumForce);
+
+                m_parentRigidbody.AddForce(forceDirection * force);
             }
 
         }
@@ -86,7 +86,7 @@ public class Grabbable : MonoBehaviour
 
     public void StartGrab()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
 
         Debug.Log(m_parent.name + " Grabbed");
 
