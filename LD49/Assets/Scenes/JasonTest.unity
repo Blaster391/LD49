@@ -591,11 +591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_rotateForce
-      value: 200
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_scrollWheelAdditive
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_angularDrag
