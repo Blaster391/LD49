@@ -97,8 +97,6 @@ public class Grabbable : MonoBehaviour
 
                 delta = Mathf.Clamp(delta, -1.0f, 1.0f);
 
-                Debug.Log($"{angle} - {zDirection} ({delta})");
-
                 float rotationForce = m_manager.RotateForce * delta * Time.deltaTime * 100.0f;
                 m_parentRigidbody.AddTorque(rotationForce);
 
