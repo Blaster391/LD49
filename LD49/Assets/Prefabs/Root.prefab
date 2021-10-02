@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6444c93771f6143418f28520fc5d639b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_rotateForce: 750
-  m_scrollWheelAdditive: 10
+  m_rotateForce: 240
+  m_scrollWheelAdditive: 40
   m_linearDrag: 8
   m_angularDrag: 2.5
   m_threshold: 0.25
