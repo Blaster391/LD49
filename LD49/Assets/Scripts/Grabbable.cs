@@ -22,9 +22,6 @@ public class Grabbable : MonoBehaviour
     private float m_originalLinearDrag = 0.0f;
     private float m_originalAngularDrag = 0.0f;
 
-    private bool m_travellingRight = false;
-    private float m_previousZDirection = 0.0f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -91,7 +88,7 @@ public class Grabbable : MonoBehaviour
 
                 if (Mathf.Abs(delta) > 180.0f)
                 {
-                    delta = -delta;
+                    delta = -delta * 0.1f;
                 }
 
                 delta /= 360.0f;
@@ -104,9 +101,6 @@ public class Grabbable : MonoBehaviour
 
                 float rotationForce = m_manager.RotateForce * delta * Time.deltaTime * 100.0f;
                 m_parentRigidbody.AddTorque(rotationForce);
-
-                m_travellingRight = m_parentRigidbody.angularVelocity > 0.0f;
-                m_previousZDirection = zDirection;
 
             }
 
