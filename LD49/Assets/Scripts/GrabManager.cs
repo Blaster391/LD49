@@ -105,15 +105,15 @@ public class GrabManager : MonoBehaviour
 
         if(m_grabbable != null)
         {
-            Cursor.SetCursor(m_grabCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(m_grabCursor, new Vector2(30, 30), CursorMode.Auto);
         }
         else if(hoveredGrabbable != null)
         {
-            Cursor.SetCursor(m_hoverCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(m_hoverCursor, new Vector2(30, 30), CursorMode.Auto);
         }
         else
         {
-            Cursor.SetCursor(m_regularCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(m_regularCursor, new Vector2(30, 30), CursorMode.Auto);
         }
 
     }
