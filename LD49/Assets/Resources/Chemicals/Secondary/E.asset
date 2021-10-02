@@ -16,4 +16,6 @@ MonoBehaviour:
   m_mass: 0.05
   m_scale: 0.25
   m_color: {r: 0.9467213, g: 1, b: 0, a: 1}
-  m_temperatureReactions: []
+  m_temperatureReactions:
+  - m_upperBound: 10
+    m_result: {fileID: 11400000, guid: 72ccb0690f14cf14fa8846e2afec2e2a, type: 2}

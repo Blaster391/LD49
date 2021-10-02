@@ -11,11 +11,13 @@ GameObject:
   - component: {fileID: 2586644000666740674}
   - component: {fileID: 2586644000666740675}
   - component: {fileID: 5719852504588296432}
+  - component: {fileID: 3362307225294907273}
   - component: {fileID: 577179709416976410}
   - component: {fileID: 8046329650281049752}
   - component: {fileID: 2604139802847944841}
   - component: {fileID: 2748663362347231417}
   - component: {fileID: 8658437206048829719}
+  - component: {fileID: 7163598255885494096}
   m_Layer: 0
   m_Name: Chemical
   m_TagString: Untagged
@@ -109,6 +111,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3362307225294907273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c81288101c829df43b5b03d4208494c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &577179709416976410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +189,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_scaleTime: 1
   m_rigidbody: {fileID: 5719852504588296432}
+--- !u!114 &7163598255885494096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9f445d976256746a54d5a3ca3c77b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_temperature: 0
+  m_maxTemperature: 20
+  m_coolingPerSecond: 1
