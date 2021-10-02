@@ -77,15 +77,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758300660f4cefd42b4fcc3e420e5f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementForce: 25000
-  m_rotateForce: 1000
-  m_scrollWheelAdditive: 10
-  m_linearDrag: 8
-  m_angularDrag: 2.5
-  m_threshold: 0.25
-  m_minimumForce: 500
-  m_maximumForce: 20000
-  m_maximumForceDistance: 35
+--- !u!1 &298932086420249959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1135997231083424879}
+  - component: {fileID: 3761955315472295209}
+  - component: {fileID: 5332217486718922889}
+  m_Layer: 0
+  m_Name: Contents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1135997231083424879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298932086420249959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7631918174965499232}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &3761955315472295209
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298932086420249959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.81239414, y: 2.0212975}
+      - {x: -0.88387394, y: -0.55488086}
+      - {x: -1.786663, y: -1.2693517}
+      - {x: -2.4214778, y: -2.3409624}
+      - {x: 2.2357874, y: -2.340963}
+      - {x: 1.6449165, y: -1.3894405}
+      - {x: 0.965395, y: -0.5367272}
+      - {x: 0.8350005, y: 2.003442}
+--- !u!114 &5332217486718922889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298932086420249959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966ae994a8a8aa549a3eb544472daf9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7631918174965499234
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +166,7 @@ GameObject:
   - component: {fileID: 7631918174965499233}
   - component: {fileID: 966927222}
   - component: {fileID: 966927225}
+  - component: {fileID: 4757038034366409740}
   m_Layer: 0
   m_Name: ConicalFlask
   m_TagString: Untagged
@@ -117,6 +186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 789184119}
+  - {fileID: 1135997231083424879}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -322,3 +392,15 @@ PolygonCollider2D:
       - {x: 1.5799999, y: -2.46}
       - {x: 1.88, y: -2.4299998}
       - {x: 2.29, y: -2.4299998}
+--- !u!114 &4757038034366409740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631918174965499234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794cf21e1ac9b6a4ba2e6e24826b5e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

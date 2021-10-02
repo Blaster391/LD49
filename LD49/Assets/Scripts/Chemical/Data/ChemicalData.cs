@@ -21,5 +21,6 @@ public class ChemicalData : ScriptableObject
         public float m_upperBound;
         public ChemicalData m_result;
     }
-    public List<TemperatureReaction> m_temperatureReactions = new List<TemperatureReaction>();
+    [SerializeField] private List<TemperatureReaction> m_temperatureReactions = new List<TemperatureReaction>();
+    public List<TemperatureReaction> TemperatureReactions => new List<TemperatureReaction>(m_temperatureReactions);
 }
