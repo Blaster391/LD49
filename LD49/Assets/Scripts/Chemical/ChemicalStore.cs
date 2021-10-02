@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ChemicalStore : MonoBehaviour
 {
+    [SerializeField]
+    private TextMeshPro m_timerText = null;
+    [SerializeField]
+    private TextMeshPro m_countText = null;
+
     [SerializeField] 
     private ChemicalData m_targetChemicalType = null;
     [SerializeField]
@@ -11,10 +17,13 @@ public class ChemicalStore : MonoBehaviour
 
     private List<IChemicalState> m_containedChemicals = new List<IChemicalState>();
     private bool m_complete = false;
+    private LevelManager m_levelManager = null;
+    private uint m_lastCount = 0;
 
     private void Start()
     {
-       GetComponentInParent<LevelManager>().RegisterStore(this);
+        m_levelManager = GetComponentInParent<LevelManager>();
+        m_levelManager.RegisterStore(this);
     }
 
 
@@ -34,6 +43,17 @@ public class ChemicalStore : MonoBehaviour
         }
 
         m_complete = correctCount >= m_targetChemicalCount;
+
+        m_lastCount = correctCount;
+
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+        m_timerText.text = $"{m_levelManager.TimeLeft():00.00}";
+
+        m_countText.text = $"{m_lastCount}/{m_targetChemicalCount}";
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

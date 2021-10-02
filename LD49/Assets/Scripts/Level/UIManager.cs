@@ -6,9 +6,6 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI m_timer;
-
-    [SerializeField]
     private TextMeshProUGUI m_gameOver;
 
     [SerializeField]
@@ -19,7 +16,6 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_timer.gameObject.SetActive(false);
         m_gameOver.gameObject.SetActive(false);
         m_levelComplete.gameObject.SetActive(false);
 
@@ -29,7 +25,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_timer.gameObject.SetActive(false);
         m_gameOver.gameObject.SetActive(false);
         m_levelComplete.gameObject.SetActive(false);
 
@@ -43,9 +38,9 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            m_timer.gameObject.SetActive(true);
+            //m_timer.gameObject.SetActive(true);
 
-            m_timer.text = $"{Mathf.RoundToInt(m_levelManager.TimeLeft())}";
+            //m_timer.text = $"{Mathf.RoundToInt(m_levelManager.TimeLeft())}";
         }
     }
 }
