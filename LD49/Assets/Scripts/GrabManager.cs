@@ -52,6 +52,8 @@ public class GrabManager : MonoBehaviour
 
     private LevelManager m_levelManagerIF = null;
 
+    private Texture2D m_currentCursor = null;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -76,7 +78,14 @@ public class GrabManager : MonoBehaviour
                 m_grabbable.EndGrab();
                 m_grabbable = null;
             }
-            Cursor.SetCursor(m_regularCursor, Vector2.zero, CursorMode.Auto);
+
+            Texture2D deathCursor = m_regularCursor;
+            if (m_currentCursor != deathCursor)
+            {
+                m_currentCursor = deathCursor;
+                Cursor.SetCursor(m_currentCursor, new Vector2(10, 10), CursorMode.Auto);
+            }
+
             return;
         }
 
@@ -103,17 +112,24 @@ public class GrabManager : MonoBehaviour
             m_grabbable = null;
         }
 
+        Texture2D newCursor = null;
         if(m_grabbable != null)
         {
-            Cursor.SetCursor(m_grabCursor, new Vector2(30, 30), CursorMode.Auto);
+            newCursor = m_grabCursor;
         }
         else if(hoveredGrabbable != null)
         {
-            Cursor.SetCursor(m_hoverCursor, new Vector2(30, 30), CursorMode.Auto);
+            newCursor = m_hoverCursor;
         }
         else
         {
-            Cursor.SetCursor(m_regularCursor, new Vector2(30, 30), CursorMode.Auto);
+            newCursor = m_regularCursor;
+        }
+
+        if(m_currentCursor != newCursor)
+        {
+            m_currentCursor = newCursor;
+            Cursor.SetCursor(m_currentCursor, new Vector2(10, 10), CursorMode.Auto);
         }
 
     }
