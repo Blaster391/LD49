@@ -78,6 +78,11 @@ public class LevelManager : MonoBehaviour
         return m_timeLeft;
     }
 
+    public void TriggerGameOver()
+    {
+        m_gameOver = true;
+    }
+
     public void NextLevel()
     {
         SceneManager.LoadScene(m_nextLevel, LoadSceneMode.Single);

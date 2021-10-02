@@ -50,6 +50,8 @@ public class GrabManager : MonoBehaviour
     [SerializeField]
     private Texture2D m_grabCursor = null;
 
+    private LevelManager m_levelManagerIF = null;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -57,11 +59,27 @@ public class GrabManager : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8, 8);
     }
 
+    private void Start()
+    {
+        m_levelManagerIF = GetComponent<LevelManager>();
+    }
+
     private Grabbable m_grabbable = null;
 
     // Update is called once per frame
     void Update()
     {
+        if(m_levelManagerIF.LevelIsFailed() || m_levelManagerIF.LevelIsComplete())
+        {
+            if(m_grabbable != null)
+            {
+                m_grabbable.EndGrab();
+                m_grabbable = null;
+            }
+            Cursor.SetCursor(m_regularCursor, Vector2.zero, CursorMode.Auto);
+            return;
+        }
+
         int layer = 8;
         int layerMask = (1 << layer);
 
