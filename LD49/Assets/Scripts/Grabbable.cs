@@ -20,7 +20,10 @@ public class Grabbable : MonoBehaviour
     private float m_movementForce = 10000.0f;
 
     [SerializeField]
-    private float m_rotateForce = 5000.0f;
+    private float m_rotateForce = 500.0f;
+
+    [SerializeField]
+    private float m_scrollWheelAdditive = 100.0f;
 
     [SerializeField]
     private float m_angularDrag = 1.0f;
@@ -41,26 +44,24 @@ public class Grabbable : MonoBehaviour
             Vector3 forceDirection = mouseWorld - m_parent.transform.position;
             m_parentRigidbody.velocity = Vector3.zero;
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                m_cachedMousePosition = Input.mousePosition;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-
-            if(Input.GetMouseButtonUp(1))
-            {
-                SetCursorPos((int)m_cachedMousePosition.x, (int)m_cachedMousePosition.y);
-
-                Cursor.lockState = CursorLockMode.None;
-            }
-
             if (Input.GetMouseButton(1))
             {
                 m_parentRigidbody.AddTorque(Input.GetAxis("Rotate") * m_rotateForce);
             }
             else
             {
-                m_parentRigidbody.AddTorque(Input.mouseScrollDelta.y * m_rotateForce);
+                if(Input.GetKey(KeyCode.Q))
+                {
+                    m_parentRigidbody.AddTorque(1.0f * m_rotateForce);
+                }
+                else if(Input.GetKey(KeyCode.E))
+                {
+                    m_parentRigidbody.AddTorque(-1.0f * m_rotateForce);
+                }
+                else
+                {
+                    m_parentRigidbody.AddTorque(Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
+                }
 
                 Cursor.lockState = CursorLockMode.None;
 
@@ -83,8 +84,6 @@ public class Grabbable : MonoBehaviour
 
     public void EndGrab()
     {
-        Cursor.lockState = CursorLockMode.None;
-
         Debug.Log(m_parent.name + " Dropped");
 
         m_grabbed = false;

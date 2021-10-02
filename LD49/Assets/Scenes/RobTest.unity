@@ -271,8 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_movementForce: 50000
-  m_rotateForce: 5000
-  m_angularDrag: 1
+  m_rotateForce: 1000
+  m_scrollWheelAdditive: 100
+  m_angularDrag: 2.5
 --- !u!1 &867595519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
