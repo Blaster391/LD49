@@ -50,6 +50,8 @@ public class Grabbable : MonoBehaviour
                 rotationForce = (Input.mouseScrollDelta.y * m_manager.RotateForce * m_manager.ScrollWheelAdditive);
             }
 
+            rotationForce *= Time.deltaTime * 100.0f;
+
             m_parentRigidbody.AddTorque(rotationForce);
 
             float distance = forceDirection.magnitude;
@@ -58,8 +60,12 @@ public class Grabbable : MonoBehaviour
             {
                 float force = Mathf.Lerp(m_manager.MinimumForce, m_manager.MaximumForce, distance / m_manager.MaximumForceDistance);
                 force = Mathf.Clamp(force, m_manager.MinimumForce, m_manager.MaximumForce);
-
+                force *= Time.deltaTime * 100.0f;
                 m_parentRigidbody.AddForce(forceDirection * force);
+            }
+            else
+            {
+                m_parentRigidbody.velocity = m_parentRigidbody.velocity * 0.8f;
             }
 
         }

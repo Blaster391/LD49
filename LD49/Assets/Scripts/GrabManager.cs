@@ -41,6 +41,15 @@ public class GrabManager : MonoBehaviour
     private float m_maximumForceDistance = 100.0f;
     public float MaximumForceDistance => m_maximumForceDistance;
 
+    [SerializeField]
+    private Texture2D m_regularCursor = null;
+
+    [SerializeField]
+    private Texture2D m_hoverCursor = null;
+
+    [SerializeField]
+    private Texture2D m_grabCursor = null;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -59,11 +68,11 @@ public class GrabManager : MonoBehaviour
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Collider2D result = Physics2D.OverlapPoint(mouseWorld, layerMask);
 
+        Grabbable hoveredGrabbable = result?.transform?.gameObject?.GetComponent<Grabbable>();
+
         if (Input.GetMouseButtonDown(0))
         {
-
-
-            m_grabbable = result?.transform?.gameObject?.GetComponent<Grabbable>();
+            m_grabbable = hoveredGrabbable;
             if(m_grabbable != null)
             {
                 m_grabbable.StartGrab();
@@ -76,7 +85,18 @@ public class GrabManager : MonoBehaviour
             m_grabbable = null;
         }
 
-
+        if(m_grabbable != null)
+        {
+            Cursor.SetCursor(m_grabCursor, Vector2.zero, CursorMode.Auto);
+        }
+        else if(hoveredGrabbable != null)
+        {
+            Cursor.SetCursor(m_hoverCursor, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(m_regularCursor, Vector2.zero, CursorMode.Auto);
+        }
 
     }
 }

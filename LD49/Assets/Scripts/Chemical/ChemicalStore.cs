@@ -12,10 +12,9 @@ public class ChemicalStore : MonoBehaviour
     private List<IChemicalState> m_containedChemicals = new List<IChemicalState>();
     private bool m_complete = false;
 
-    private LevelManager m_levelManager = null;
     private void Start()
     {
-        GetComponentInParent<LevelManager>().RegisterStore(this);
+       GetComponentInParent<LevelManager>().RegisterStore(this);
     }
 
 

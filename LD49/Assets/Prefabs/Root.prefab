@@ -53,6 +53,9 @@ MonoBehaviour:
   m_minimumForce: 500
   m_maximumForce: 15000
   m_maximumForceDistance: 35
+  m_regularCursor: {fileID: 2800000, guid: 064b0dd5fd8f90b49a11c395f5c61e18, type: 3}
+  m_hoverCursor: {fileID: 2800000, guid: bf93386831d175c48833b03b0e52281d, type: 3}
+  m_grabCursor: {fileID: 2800000, guid: f08d0a8755611e1409f9fca519ebf18f, type: 3}
 --- !u!114 &3556416218142545762
 MonoBehaviour:
   m_ObjectHideFlags: 0
