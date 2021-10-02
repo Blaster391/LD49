@@ -6,6 +6,12 @@ using System.Runtime.InteropServices;
 
 public class Grabbable : MonoBehaviour
 {
+    [SerializeField]
+    private bool m_adjustCentreOfMass = true;
+
+    [SerializeField]
+    private bool m_rotateOnGrab = false;
+
     private bool m_grabbed = false;
     private GameObject m_parent;
     private Rigidbody2D m_parentRigidbody;
@@ -41,23 +47,46 @@ public class Grabbable : MonoBehaviour
             Vector3 targetPoint = m_parent.transform.TransformPoint(m_grabbedPosition);
             Vector2 forceDirection = mouseWorld - targetPoint;
 
-            float rotationForce = 0.0f;
-            if (Input.GetKey(KeyCode.Q))
+            if(!m_rotateOnGrab)
             {
-                rotationForce = (1.0f * m_manager.RotateForce);
-            }
-            else if (Input.GetKey(KeyCode.E))
-            {
-                rotationForce = (-1.0f * m_manager.RotateForce);
+                float rotationForce = 0.0f;
+                if (Input.GetKey(KeyCode.Q))
+                {
+                    rotationForce = (1.0f * m_manager.RotateForce);
+                }
+                else if (Input.GetKey(KeyCode.E))
+                {
+                    rotationForce = (-1.0f * m_manager.RotateForce);
+                }
+                else
+                {
+                    rotationForce = (Mathf.Clamp(-Input.mouseScrollDelta.y * m_manager.ScrollWheelAdditive, -2.0f, 2.0f) * m_manager.RotateForce);
+                }
+
+                rotationForce *= Time.deltaTime * 100.0f;
+
+                m_parentRigidbody.AddTorque(rotationForce);
             }
             else
             {
-                rotationForce = (Input.mouseScrollDelta.y * m_manager.RotateForce * m_manager.ScrollWheelAdditive);
+                float rotationForce = m_manager.RotateForce;
+
+                Vector2 lookPos = mouseWorld - targetPoint;
+                float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
+
+                float zDirection = m_parent.transform.rotation.eulerAngles.z;
+
+                float delta = angle - zDirection;
+                delta /= 360.0f;
+
+
+                Debug.Log($"{angle} - {zDirection}");
+
+                rotationForce *= Time.deltaTime * 100.0f;
+                m_parentRigidbody.AddTorque(rotationForce);
             }
 
-            rotationForce *= Time.deltaTime * 100.0f;
 
-            m_parentRigidbody.AddTorque(rotationForce);
 
             float distance = forceDirection.magnitude;
             forceDirection.Normalize();
@@ -94,7 +123,10 @@ public class Grabbable : MonoBehaviour
 
         m_grabbedPosition = m_parent.transform.InverseTransformPoint(mouseWorld);
 
-        m_parentRigidbody.centerOfMass = m_grabbedPosition;
+        if (m_adjustCentreOfMass)
+        {
+            m_parentRigidbody.centerOfMass = m_grabbedPosition;
+        }
 
         Debug.Log(m_grabbedPosition);
     }
@@ -111,6 +143,10 @@ public class Grabbable : MonoBehaviour
         m_parentRigidbody.angularDrag = m_originalAngularDrag;
         m_parentRigidbody.drag = m_originalLinearDrag;
 
-        m_parentRigidbody.centerOfMass = m_centreOfMass;
+        if(m_adjustCentreOfMass)
+        {
+            m_parentRigidbody.centerOfMass = m_centreOfMass;
+        }
+
     }
 }
