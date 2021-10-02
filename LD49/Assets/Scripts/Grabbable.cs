@@ -14,7 +14,7 @@ public class Grabbable : MonoBehaviour
     private GameObject m_parent;
     private Rigidbody2D m_parentRigidbody;
     private Vector3 m_clickPoint = Vector3.zero;
-    private Vector2 m_cachedMousePosition = Vector2.zero;
+    private Vector3 m_grabbedPosition = Vector3.zero;
 
     [SerializeField]
     private float m_movementForce = 10000.0f;
@@ -26,7 +26,13 @@ public class Grabbable : MonoBehaviour
     private float m_scrollWheelAdditive = 100.0f;
 
     [SerializeField]
+    private float m_linearDrag = 1.0f;
+
+    [SerializeField]
     private float m_angularDrag = 1.0f;
+
+    [SerializeField]
+    private float m_threshold = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,36 +46,35 @@ public class Grabbable : MonoBehaviour
     {
         if(m_grabbed)
         {
-            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 forceDirection = mouseWorld - m_parent.transform.position;
-            m_parentRigidbody.velocity = Vector3.zero;
 
-            if (Input.GetMouseButton(1))
+
+            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector3 targetPoint = m_parent.transform.TransformPoint(m_grabbedPosition);
+            Vector2 forceDirection = mouseWorld - targetPoint;
+
+
+            if (Input.GetKey(KeyCode.Q))
             {
-                m_parentRigidbody.AddTorque(Input.GetAxis("Rotate") * m_rotateForce);
+                m_parentRigidbody.AddTorque(1.0f * m_rotateForce);
+            }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                m_parentRigidbody.AddTorque(-1.0f * m_rotateForce);
             }
             else
             {
-                if(Input.GetKey(KeyCode.Q))
-                {
-                    m_parentRigidbody.AddTorque(1.0f * m_rotateForce);
-                }
-                else if(Input.GetKey(KeyCode.E))
-                {
-                    m_parentRigidbody.AddTorque(-1.0f * m_rotateForce);
-                }
-                else
-                {
-                    m_parentRigidbody.AddTorque(Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
-                }
-
-                Cursor.lockState = CursorLockMode.None;
-
-                forceDirection.Normalize();
-
-                m_parentRigidbody.AddForce(forceDirection * m_movementForce);
+                m_parentRigidbody.AddTorque(Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
             }
+
+            if (forceDirection.magnitude > m_threshold)
+            {
+                forceDirection.Normalize();
+                m_parentRigidbody.AddForce(forceDirection * m_movementForce * 0.1f);
+            }
+
         }
+        
     }
 
     public void StartGrab()
@@ -78,8 +83,16 @@ public class Grabbable : MonoBehaviour
 
         m_grabbed = true;
         m_parentRigidbody.gravityScale = 0.0f;
-
+        m_parentRigidbody.drag = m_linearDrag;
         m_parentRigidbody.angularDrag = m_angularDrag;
+
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        
+
+        m_grabbedPosition = m_parent.transform.InverseTransformPoint(mouseWorld);
+
+        Debug.Log(m_grabbedPosition);
     }
 
     public void EndGrab()
@@ -89,6 +102,7 @@ public class Grabbable : MonoBehaviour
         m_grabbed = false;
         m_parentRigidbody.gravityScale = 1.0f;
 
-        m_parentRigidbody.angularDrag = 0.0f;
+        m_parentRigidbody.angularDrag = 0.05f;
+        m_parentRigidbody.drag = 0.0f;
     }
 }
