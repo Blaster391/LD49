@@ -8,8 +8,19 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private string m_nextLevel;
 
+    [SerializeField]
+    private float m_timeLimit = 61.0f;
+
+    private float m_timeLeft = 0.0f;
+
     private List<ChemicalStore> m_stores = new List<ChemicalStore>();
     private bool m_complete = false;
+    private bool m_gameOver = false;
+
+    private void Start()
+    {
+        m_timeLeft = m_timeLimit;
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,6 +29,12 @@ public class LevelManager : MonoBehaviour
         {
             RestartLevel();
         }
+
+        if(m_gameOver)
+        {
+            return;
+        }
+
 
         if(!m_complete)
         {
@@ -34,6 +51,11 @@ public class LevelManager : MonoBehaviour
             }
 
         }
+        else
+        {
+            m_timeLeft -= Time.deltaTime;
+            m_gameOver = m_timeLeft < 0.0f;
+        }
     }
 
     public void RegisterStore(ChemicalStore _store)
@@ -44,6 +66,16 @@ public class LevelManager : MonoBehaviour
     public bool LevelIsComplete()
     {
         return m_complete;
+    }
+
+    public bool LevelIsFailed()
+    {
+        return m_gameOver;
+    }
+
+    public float TimeLeft()
+    {
+        return m_timeLeft;
     }
 
     public void NextLevel()
