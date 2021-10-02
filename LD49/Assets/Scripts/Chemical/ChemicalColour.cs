@@ -5,33 +5,28 @@ using UnityEngine;
 /*
  *  Controls the colour of a chemical
  */
-public class ChemicalColour : MonoBehaviour
+[RequireComponent(typeof(SpriteRenderer))]
+public class ChemicalColour : ChemicalScalingPropertyBase<Color>
 {
     [SerializeField] private SpriteRenderer m_spriteRenderer = null;
 
-    private IChemicalState m_chemicalStateIF = null;
-
-    #region Unity
-    void Awake()
+    protected override Color GetCurrentValue()
     {
-        m_chemicalStateIF = GetComponent<IChemicalState>();
+        return m_spriteRenderer.color;
     }
 
-    void Start()
+    protected override Color GetTargetValue(ChemicalData i_data)
     {
-        m_chemicalStateIF.StateChanged += OnStateChange;
-
-        // Set initial colour
-        Color color = m_chemicalStateIF.State.Color;
-        m_spriteRenderer.color = color;
+        return i_data.Color;
     }
-    #endregion
 
-    #region Listeners
-    private void OnStateChange(ChemicalData i_from, ChemicalData i_to)
+    protected override Color LerpValue(Color i_startValue, Color i_targetValue, float i_lerp)
     {
-        // Do instantly for now
-        m_spriteRenderer.color = i_to.Color;
+        return Color.Lerp(i_startValue, i_targetValue, i_lerp);
     }
-    #endregion
+
+    protected override void SetValue(Color i_newValue)
+    {
+        m_spriteRenderer.color = i_newValue;
+    }
 }

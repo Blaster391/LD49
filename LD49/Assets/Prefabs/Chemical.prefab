@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 577179709416976410}
   - component: {fileID: 8046329650281049752}
   - component: {fileID: 2604139802847944841}
+  - component: {fileID: 2748663362347231417}
+  - component: {fileID: 8658437206048829719}
   m_Layer: 0
   m_Name: Chemical
   m_TagString: Untagged
@@ -144,4 +146,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b4a3c20e70ddd4e97513818006669a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_scaleTime: 1
   m_spriteRenderer: {fileID: 2586644000666740675}
+--- !u!114 &2748663362347231417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee51ffc1b18b9534a9f7f4f2e5893157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scaleTime: 1
+--- !u!114 &8658437206048829719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29b05c3e6eaf384c8228e9a09253414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_scaleTime: 1
+  m_rigidbody: {fileID: 5719852504588296432}
