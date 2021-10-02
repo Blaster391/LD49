@@ -473,6 +473,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_angularDrag
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_linearDrag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_maximumForce
+      value: 15000
+      objectReference: {fileID: 0}
     - target: {fileID: 133033014688265606, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_Name
       value: Root

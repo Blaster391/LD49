@@ -47,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rotateForce: 240
   m_scrollWheelAdditive: 40
-  m_linearDrag: 8
-  m_angularDrag: 2.5
+  m_linearDrag: 20
+  m_angularDrag: 15
   m_threshold: 0.25
   m_minimumForce: 500
-  m_maximumForce: 20000
+  m_maximumForce: 15000
   m_maximumForceDistance: 35
 --- !u!114 &3556416218142545762
 MonoBehaviour:
