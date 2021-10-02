@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IChemicalTemperature
 {
+    float Temperature { get; }
     float AlterTemperature(float i_change);
 }

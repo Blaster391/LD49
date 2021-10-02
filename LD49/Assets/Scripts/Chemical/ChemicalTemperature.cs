@@ -37,6 +37,7 @@ public class ChemicalTemperature : MonoBehaviour, IChemicalTemperature
     #endregion
 
     #region IChemicalTexture
+    public float Temperature => m_temperature;
     public float AlterTemperature(float i_change)
     {
         m_temperature = Mathf.Clamp(m_temperature + i_change, 0f, m_maxTemperature);
