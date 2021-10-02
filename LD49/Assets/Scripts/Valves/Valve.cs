@@ -5,6 +5,9 @@ using UnityEngine;
 public class Valve : MonoBehaviour
 {
     [SerializeField]
+    private bool m_invert = false;
+
+    [SerializeField]
     private float m_minRotation = 5.0f;
 
     [SerializeField]
@@ -21,6 +24,12 @@ public class Valve : MonoBehaviour
 
         zDirection = Mathf.Clamp(zDirection, m_minRotation, m_maxRotation);
 
-        return (zDirection - m_minRotation) / m_maxRotation;
+        float result = (zDirection - m_minRotation) / m_maxRotation;
+        if(m_invert)
+        {
+            result = 1.0f - result;
+        }
+
+        return result;
     }
 }
