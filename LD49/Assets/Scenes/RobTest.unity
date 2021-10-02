@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 86353416}
   - component: {fileID: 86353417}
   - component: {fileID: 86353418}
+  - component: {fileID: 86353420}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +207,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &86353420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86353419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4c4129e99d73e42bc797e43c477949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_targetHeight: 18
+  m_targetWidth: 32
 --- !u!58 &157423180
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -239,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.34
+      value: -2.03
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -320,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.92
+      value: -2.4499998
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -494,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615442908628103383, guid: 59c598b0fabf9c94c8450b12c329c06d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2745342
+      value: -2.0954657
       objectReference: {fileID: 0}
     - target: {fileID: 4615442908628103383, guid: 59c598b0fabf9c94c8450b12c329c06d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -761,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.39
+      value: -1.98
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1071,7 +1086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.845
+      value: -1.5249999
       objectReference: {fileID: 0}
     - target: {fileID: 2586644000666740674, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1321,6 +1336,10 @@ PrefabInstance:
     - target: {fileID: 1342977796420152832, guid: 084b1c972d5216b4c9783fd08c8dcaf7, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342977796420152832, guid: 084b1c972d5216b4c9783fd08c8dcaf7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6225787411845987981, guid: 084b1c972d5216b4c9783fd08c8dcaf7, type: 3}
       propertyPath: m_LocalPosition.x
