@@ -12,7 +12,9 @@ public class Grabbable : MonoBehaviour
     private Vector3 m_grabbedPosition = Vector3.zero;
     private Vector2 m_centreOfMass = Vector2.zero;
     private GrabManager m_manager = null;
-
+    private float m_originalGravityScale = 0.0f;
+    private float m_originalLinearDrag = 0.0f;
+    private float m_originalAngularDrag = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,9 @@ public class Grabbable : MonoBehaviour
         m_parentRigidbody = m_parent.GetComponent<Rigidbody2D>();
 
         m_centreOfMass = m_parentRigidbody.centerOfMass;
+        m_originalGravityScale = m_parentRigidbody.gravityScale;
+        m_originalLinearDrag = m_parentRigidbody.drag;
+        m_originalAngularDrag = m_parentRigidbody.angularDrag;
 
         m_manager = GetComponentInParent<GrabManager>();
     }
@@ -101,10 +106,10 @@ public class Grabbable : MonoBehaviour
         Debug.Log(m_parent.name + " Dropped");
 
         m_grabbed = false;
-        m_parentRigidbody.gravityScale = 1.0f;
+        m_parentRigidbody.gravityScale = m_originalGravityScale;
 
-        m_parentRigidbody.angularDrag = 0.05f;
-        m_parentRigidbody.drag = 0.0f;
+        m_parentRigidbody.angularDrag = m_originalAngularDrag;
+        m_parentRigidbody.drag = m_originalLinearDrag;
 
         m_parentRigidbody.centerOfMass = m_centreOfMass;
     }
