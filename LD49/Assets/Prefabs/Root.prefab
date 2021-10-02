@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6444c93771f6143418f28520fc5d639b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_rotateForce: 240
+  m_rotateForce: 700
   m_scrollWheelAdditive: 40
-  m_linearDrag: 20
-  m_angularDrag: 15
-  m_threshold: 0.25
+  m_linearDrag: 8
+  m_angularDrag: 10
+  m_threshold: 0.05
   m_minimumForce: 500
-  m_maximumForce: 15000
+  m_maximumForce: 45000
   m_maximumForceDistance: 35
   m_regularCursor: {fileID: 2800000, guid: 064b0dd5fd8f90b49a11c395f5c61e18, type: 3}
   m_hoverCursor: {fileID: 2800000, guid: bf93386831d175c48833b03b0e52281d, type: 3}

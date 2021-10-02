@@ -475,15 +475,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_angularDrag
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_linearDrag
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_maximumForce
-      value: 15000
+      value: 45000
+      objectReference: {fileID: 0}
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_rotateForce
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_threshold
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 133033014688265604, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
+      propertyPath: m_scrollWheelAdditive
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 133033014688265606, guid: 2c1656d8f4d5c3442859179894de1420, type: 3}
       propertyPath: m_Name
@@ -842,6 +854,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1512245214}
   - component: {fileID: 1512245213}
+  - component: {fileID: 1512245216}
+  - component: {fileID: 1512245215}
   m_Layer: 0
   m_Name: TestTube
   m_TagString: Untagged
@@ -914,6 +928,75 @@ Transform:
   m_Father: {fileID: 814867625}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1512245215
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512245212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.88, y: 2.33}
+    newSize: {x: 0.88, y: 2.33}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.44, y: 1.0154107}
+      - {x: 0.44, y: 1.165}
+      - {x: 0.24680361, y: 1.1481965}
+      - {x: 0.18652558, y: 0.96578074}
+      - {x: 0.17319643, y: -0.84659857}
+      - {x: 0.06733304, y: -0.9634707}
+      - {x: -0.096119285, y: -0.9526808}
+      - {x: -0.17958918, y: -0.8113925}
+      - {x: -0.1711874, y: -0.6640966}
+      - {x: -0.17118746, y: 0.99946094}
+      - {x: -0.25520536, y: 1.1481967}
+      - {x: -0.42999998, y: 1.165}
+      - {x: -0.44, y: 1.155}
+      - {x: -0.4231965, y: 1.0162647}
+      - {x: -0.34758002, y: 0.9658537}
+      - {x: -0.35598207, y: -0.6065986}
+      - {x: -0.33758023, y: -0.8602051}
+      - {x: -0.24319637, y: -1.0809817}
+      - {x: -0.07524592, y: -1.1504762}
+      - {x: 0.14159818, y: -1.1313925}
+      - {x: 0.26479462, y: -1.0497948}
+      - {x: 0.33958924, y: -0.89340186}
+      - {x: 0.35438386, y: 0.99381286}
+--- !u!50 &1512245216
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512245212}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 50
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1744325996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2586644000666740284, guid: 081f08031260aab4796e0eb88b75888f, type: 3}
