@@ -15,6 +15,7 @@ public class Grabbable : MonoBehaviour
     private Rigidbody2D m_parentRigidbody;
     private Vector3 m_clickPoint = Vector3.zero;
     private Vector3 m_grabbedPosition = Vector3.zero;
+    private Vector2 m_centreOfMass = Vector2.zero;
 
     [SerializeField]
     private float m_movementForce = 10000.0f;
@@ -39,6 +40,8 @@ public class Grabbable : MonoBehaviour
     {
         m_parent = transform.parent.gameObject;
         m_parentRigidbody = m_parent.GetComponent<Rigidbody2D>();
+
+        m_centreOfMass = m_parentRigidbody.centerOfMass;
     }
 
     // Update is called once per frame
@@ -54,18 +57,22 @@ public class Grabbable : MonoBehaviour
             Vector2 forceDirection = mouseWorld - targetPoint;
 
 
+
+            float rotationForce = 0.0f;
             if (Input.GetKey(KeyCode.Q))
             {
-                m_parentRigidbody.AddTorque(1.0f * m_rotateForce);
+                rotationForce = (1.0f * m_rotateForce);
             }
             else if (Input.GetKey(KeyCode.E))
             {
-                m_parentRigidbody.AddTorque(-1.0f * m_rotateForce);
+                rotationForce = (-1.0f * m_rotateForce);
             }
             else
             {
-                m_parentRigidbody.AddTorque(Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
+                rotationForce = (Input.mouseScrollDelta.y * m_rotateForce * m_scrollWheelAdditive);
             }
+
+            m_parentRigidbody.AddTorque(rotationForce);
 
             if (forceDirection.magnitude > m_threshold)
             {
@@ -92,6 +99,8 @@ public class Grabbable : MonoBehaviour
 
         m_grabbedPosition = m_parent.transform.InverseTransformPoint(mouseWorld);
 
+        m_parentRigidbody.centerOfMass = m_grabbedPosition;
+
         Debug.Log(m_grabbedPosition);
     }
 
@@ -104,5 +113,7 @@ public class Grabbable : MonoBehaviour
 
         m_parentRigidbody.angularDrag = 0.05f;
         m_parentRigidbody.drag = 0.0f;
+
+        m_parentRigidbody.centerOfMass = m_centreOfMass;
     }
 }
