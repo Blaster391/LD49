@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Valve : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private float m_minRotation = 5.0f;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private float m_maxRotation = 355.0f;
+
+    public float GetValveProp()
     {
-        
+        var eulerAngles = transform.rotation.eulerAngles;
+        float zDirection = -eulerAngles.z;
+        if (zDirection < 0)
+        {
+            zDirection += 360.0f;
+        }
+
+        zDirection = Mathf.Clamp(zDirection, m_minRotation, m_maxRotation);
+
+        return (zDirection - m_minRotation) / m_maxRotation;
     }
 }
