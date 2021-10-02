@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: B
   m_EditorClassIdentifier: 
   m_name: Blue
-  m_mass: 1
-  m_scale: 1
+  m_mass: 0.1
+  m_scale: 0.1
   m_color: {r: 0, g: 0.3108704, b: 1, a: 1}
   m_temperatureReactions: []

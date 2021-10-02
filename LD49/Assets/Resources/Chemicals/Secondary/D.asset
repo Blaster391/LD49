@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D
   m_EditorClassIdentifier: 
   m_name: Purple
-  m_mass: 2
-  m_scale: 2
+  m_mass: 0.2
+  m_scale: 1.25
   m_color: {r: 1, g: 0, b: 1, a: 1}
   m_temperatureReactions: []
