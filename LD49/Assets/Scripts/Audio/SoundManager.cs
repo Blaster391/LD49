@@ -60,6 +60,7 @@ public class SoundManager : MonoBehaviour
             newSound.clip = _clip;
             newSound.Play();
             m_sources.Add(newSound);
+            return newSound;
         }
 
         return null;

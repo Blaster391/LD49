@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 8824398450621125729}
   - component: {fileID: 648876199985881351}
   - component: {fileID: 403270459465751574}
+  - component: {fileID: 8036861802691193964}
   m_Layer: 0
   m_Name: Stirrer
   m_TagString: Untagged
@@ -229,3 +230,20 @@ PolygonCollider2D:
       - {x: 0.046686172, y: 1.1615604}
       - {x: 0.09665871, y: 1.2299844}
       - {x: 0.09129713, y: 1.3056215}
+--- !u!114 &8036861802691193964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4651139842523312718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f704276757dbc14eb3bb7485bfea8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clip: {fileID: 8300000, guid: ac52944708dd6b54aa90be5eff10250a, type: 3}
+  m_minPitch: 1.25
+  m_maxPitch: 2
+  m_minVolume: 0.5
+  m_maxVolume: 0.75
