@@ -12,6 +12,11 @@ public class ChemicalTemperature : TemperatureComponent
         m_chemicalStateIF = GetComponent<IChemicalState>();
     }
 
+    private void Start()
+    {
+        m_chemicalStateIF.StateChanged += OnStateChange;
+    }
+
     protected override void Update()
     {
         base.Update();
@@ -38,6 +43,13 @@ public class ChemicalTemperature : TemperatureComponent
                 }
             }
         }
+    }
+    #endregion
+
+    #region Listeners
+    private void OnStateChange(ChemicalData i_from, ChemicalData i_to)
+    {
+        AlterTemperature(-Temperature);
     }
     #endregion
 }

@@ -250,9 +250,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_temperature: 0
-  m_maxTemperature: 15
+  m_maxTemperature: 10
   m_coolingPerSecond: 2
-  m_heatTransferMult: 0.6
+  m_heatTransferMult: 0.3
   m_spriteRenderer: {fileID: 8888194171916671708}
   m_coolColor: {r: 0, g: 1, b: 1, a: 1}
   m_hotColor: {r: 1, g: 0, b: 0, a: 1}
