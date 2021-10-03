@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 6402701250088076207}
   - component: {fileID: 438412141293734448}
   - component: {fileID: 354510664493137115}
+  - component: {fileID: 7312791223442212812}
   m_Layer: 5
   m_Name: WinImage
   m_TagString: Untagged
@@ -197,6 +198,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7312791223442212812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596470136451078112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4fdea32527d4043beec517d30aeadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dropAmount: 0
+  m_dropAmountDip: 0
+  m_dropTime: 3
+  m_dropDipTime: 2
 --- !u!1 &3133903739975108677
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,13 +357,14 @@ GameObject:
   - component: {fileID: 3432798211287574913}
   - component: {fileID: 3520291086869363244}
   - component: {fileID: 2899688449540329391}
+  - component: {fileID: 3899815192043703143}
   m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3432798211287574913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -406,6 +424,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3899815192043703143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191843706829084920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f46c76bfd35604c9ec3b1a322f6ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fromColor: {r: 0, g: 0, b: 0, a: 0}
+  m_toColor: {r: 0, g: 0, b: 0, a: 0.3529412}
+  m_startTime: 0
+  m_time: 1
 --- !u!1 &5646885734660881260
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +793,7 @@ GameObject:
   - component: {fileID: 5597915285448617723}
   - component: {fileID: 9128253315075564986}
   - component: {fileID: 716671398444178916}
+  - component: {fileID: 7456654964090678983}
   m_Layer: 5
   m_Name: WinSpinner
   m_TagString: Untagged
@@ -835,7 +870,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d4036d122925c4387b6d3b87a3d426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_spinSpeed: 10
+  m_spinSpeed: -20
+--- !u!114 &7456654964090678983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289167198659572921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f46c76bfd35604c9ec3b1a322f6ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fromColor: {r: 1, g: 1, b: 1, a: 0}
+  m_toColor: {r: 1, g: 1, b: 1, a: 1}
+  m_startTime: 1
+  m_time: 2
 --- !u!1 &6488177032636112385
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2520174668620350906
 RectTransform:
   m_ObjectHideFlags: 0

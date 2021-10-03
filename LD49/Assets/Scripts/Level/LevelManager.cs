@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
     private bool m_complete = false;
     private bool m_gameOver = false;
     private float m_gameOverTime = 0.0f;
+    private float m_completeTime = 0.0f;
 
     private void Start()
     {
@@ -47,9 +48,9 @@ public class LevelManager : MonoBehaviour
 
         if(m_complete)
         {
-            Debug.Log("u r winner");
+            m_completeTime += Time.deltaTime;
 
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 NextLevel();
             }
@@ -88,6 +89,11 @@ public class LevelManager : MonoBehaviour
     public float GameOverTime()
     {
         return m_gameOverTime;
+    }
+
+    public float LevelCompleteTime()
+    {
+        return m_completeTime;
     }
 
     public void TriggerGameOver(Vector3 _explosionEffect)
