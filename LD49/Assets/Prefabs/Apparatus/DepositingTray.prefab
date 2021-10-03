@@ -426,6 +426,7 @@ MonoBehaviour:
   m_countText: {fileID: 3631381143384004874}
   m_targetChemicalType: {fileID: 11400000, guid: a16a050aa89508147a19ce4de8f96eff, type: 2}
   m_targetChemicalCount: 8
+  m_chemicalSprite: {fileID: 8354837101230057639}
 --- !u!60 &1595506120196948940
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -15,6 +15,9 @@ public class ChemicalStore : MonoBehaviour
     [SerializeField]
     private uint m_targetChemicalCount = 0;
 
+    [SerializeField]
+    private SpriteRenderer m_chemicalSprite = null;
+
     private List<IChemicalState> m_containedChemicals = new List<IChemicalState>();
     private bool m_complete = false;
     private LevelManager m_levelManager = null;
@@ -24,6 +27,8 @@ public class ChemicalStore : MonoBehaviour
     {
         m_levelManager = GetComponentInParent<LevelManager>();
         m_levelManager.RegisterStore(this);
+
+        m_chemicalSprite.color = m_targetChemicalType.Color;
     }
 
 
