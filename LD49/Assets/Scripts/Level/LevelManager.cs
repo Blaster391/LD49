@@ -11,11 +11,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private float m_timeLimit = 61.0f;
 
+    [SerializeField]
+    private GameObject m_explosionPrefab;
+
     private float m_timeLeft = 0.0f;
 
     private List<ChemicalStore> m_stores = new List<ChemicalStore>();
     private bool m_complete = false;
     private bool m_gameOver = false;
+    private float m_gameOverTime = 0.0f;
 
     private void Start()
     {
@@ -32,9 +36,9 @@ public class LevelManager : MonoBehaviour
 
         if(m_gameOver)
         {
+            m_gameOverTime += Time.deltaTime;
             return;
         }
-
 
         if(!m_complete)
         {
@@ -78,9 +82,19 @@ public class LevelManager : MonoBehaviour
         return m_timeLeft;
     }
 
-    public void TriggerGameOver()
+    public float GameOverTime()
     {
-        m_gameOver = true;
+        return m_gameOverTime;
+    }
+
+    public void TriggerGameOver(Vector3 _explosionEffect)
+    {
+        if(!m_gameOver)
+        {
+            m_gameOver = true;
+            Instantiate<GameObject>(m_explosionPrefab, _explosionEffect, Quaternion.identity, transform);
+        }
+
     }
 
     public void NextLevel()
