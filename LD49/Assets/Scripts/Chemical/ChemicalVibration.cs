@@ -45,8 +45,4 @@ public class ChemicalVibration : MonoBehaviour
         m_vibrationDelay -= Time.deltaTime;
     }
     #endregion
-
-    #region Behavior
-
-    #endregion
 }
