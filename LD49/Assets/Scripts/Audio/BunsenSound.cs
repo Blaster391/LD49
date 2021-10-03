@@ -37,7 +37,7 @@ public class BunsenSound : MonoBehaviour
             }
 
             m_activeSound.loop = true;
-            m_activeSound.volume = m_bunsen.Power * m_volumeMod;
+            m_activeSound.volume = PlayerPrefs.GetFloat("Volume") * m_bunsen.Power * m_volumeMod;
 
         }
         else

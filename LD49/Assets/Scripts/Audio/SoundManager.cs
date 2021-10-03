@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
     private List<AudioSource> m_sources = new List<AudioSource>();
 
     private bool m_muted = false;
- 
+
     void Update()
     {
         bool muted = PlayerPrefs.HasKey("Sound") && PlayerPrefs.GetInt("Sound") == 0;
@@ -29,6 +29,12 @@ public class SoundManager : MonoBehaviour
             {
                 source.mute = m_muted;
             }
+        }
+
+        float newVolume = PlayerPrefs.HasKey("Volume") ? PlayerPrefs.GetFloat("Volume") : 0.5f;
+        if(newVolume != m_bgmSource.volume)
+        {
+            m_bgmSource.volume = newVolume;
         }
 
         var sourceCopy = m_sources.ToList();
@@ -58,6 +64,7 @@ public class SoundManager : MonoBehaviour
             AudioSource newSound = Instantiate<AudioSource>(m_sourcePrefab, transform);
             newSound.mute = m_muted;
             newSound.clip = _clip;
+            newSound.volume = PlayerPrefs.GetFloat("Volume");
             newSound.Play();
             m_sources.Add(newSound);
             return newSound;

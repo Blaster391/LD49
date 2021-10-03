@@ -171,6 +171,12 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void UpdateVolume(float i_volume)
+    {
+        PlayerPrefs.SetFloat("Volume", i_volume);
+        PlayerPrefs.Save();
+    }
+
     public void QuitGame()
     {
 
