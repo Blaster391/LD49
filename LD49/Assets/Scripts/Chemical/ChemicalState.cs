@@ -10,7 +10,7 @@ public class ChemicalState : MonoBehaviour, IChemicalState
 {
     [SerializeField] private ChemicalData m_state = null;
 
-    #region
+    #region Unity
     private void Awake()
     {
         if(m_state == null)
