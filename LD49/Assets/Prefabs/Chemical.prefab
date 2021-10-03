@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 7163598255885494096}
   - component: {fileID: 5586883249633981648}
   - component: {fileID: 513163162468620303}
+  - component: {fileID: 8217828560248363113}
   - component: {fileID: 5256494963977612534}
   m_Layer: 0
   m_Name: Chemical
@@ -262,6 +263,61 @@ MonoBehaviour:
   m_vibrationForceMultiplierMax: 1
   m_vibrationMinTime: 0.01
   m_vibrationMaxTime: 0.02
+--- !u!114 &8217828560248363113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df82fa121d0db0b4ebbc0bfd7a5fe664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dragMultAtTemperatureCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -15
+      value: 5
+      inSlope: -0.45183143
+      outSlope: -0.45183143
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -8.097745
+      value: 1.8813444
+      inSlope: -0.26666665
+      outSlope: -0.18940224
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.15444034
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.10883825
+      outSlope: 0
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_dragCurveMultiplier: 10
 --- !u!58 &5256494963977612534
 CircleCollider2D:
   m_ObjectHideFlags: 0
