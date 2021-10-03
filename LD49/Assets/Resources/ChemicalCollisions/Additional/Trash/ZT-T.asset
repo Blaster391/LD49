@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9f27da612dc2d4f908b1ca5f3dd850, type: 3}
+  m_Name: ZT-T
+  m_EditorClassIdentifier: 
+  m_chemicalA: {fileID: 11400000, guid: a8142c3b13c4f3b47b8c9dd96ff51798, type: 2}
+  m_chemicalB: {fileID: 11400000, guid: 1dab07770308581479bd64588dd8bd9c, type: 2}
+  m_chemicalResult: {fileID: 11400000, guid: 1dab07770308581479bd64588dd8bd9c, type: 2}
