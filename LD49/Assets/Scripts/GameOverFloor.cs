@@ -15,7 +15,7 @@ public class GameOverFloor : MonoBehaviour
         IChemicalState chemical = collision?.gameObject?.GetComponent<IChemicalState>();
         if(chemical != null)
         {
-            m_manager.TriggerGameOver();
+            m_manager.TriggerGameOver(collision.transform.position);
         }
     }
 }

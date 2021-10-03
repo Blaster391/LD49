@@ -84,3 +84,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_nextLevel: JackTest
   m_timeLimit: 61
+  m_explosionPrefab: {fileID: 4009955268858338764, guid: ddd96add20664d1498eb7337e0a4890d, type: 3}
