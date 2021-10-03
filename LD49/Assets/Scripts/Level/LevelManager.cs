@@ -35,18 +35,12 @@ public class LevelManager : MonoBehaviour
             RestartLevel();
         }
 
-        if(m_gameOver)
-        {
-            m_gameOverTime += Time.deltaTime;
-            return;
-        }
-
-        if(!m_complete)
+        if (!m_complete && !m_gameOver)
         {
             m_complete = m_stores.TrueForAll(x => x.IsComplete());
         }
 
-        if(m_complete)
+        if (m_complete)
         {
             m_completeTime += Time.deltaTime;
 
@@ -54,9 +48,15 @@ public class LevelManager : MonoBehaviour
             {
                 NextLevel();
             }
-
         }
-        else
+
+        if (m_gameOver)
+        {
+            m_gameOverTime += Time.deltaTime;
+            return;
+        }
+
+        if(!m_complete && !m_gameOver)
         {
             m_timeLeft -= Time.deltaTime;
             if(m_timeLeft < 0.0f)

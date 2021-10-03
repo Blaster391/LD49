@@ -23,7 +23,7 @@ public class ExplosionScript : MonoBehaviour
 
         transform.localScale = new Vector3(1, 1, 1) * destroyProp * Screen.width * 1.1f;
 
-        if (m_levelManager.GameOverTime() > m_deleteTime)
+        if (m_levelManager.GameOverTime() > m_deleteTime && !m_levelManager.LevelIsComplete())
         {
             Destroy(gameObject);
         }
