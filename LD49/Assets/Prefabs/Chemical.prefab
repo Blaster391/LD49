@@ -259,8 +259,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_vibrationForce: 400
-  m_vibrationForceMultiplierMin: 0.35
+  m_vibrationForce: 8000
+  m_vibrationForceMultiplierMin: 0.55
   m_vibrationForceMultiplierMax: 1
   m_vibrationMinTime: 0.01
   m_vibrationMaxTime: 0.02
