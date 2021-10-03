@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+#if UNITY_EDITOR
 using UnityEngine;
+#endif
 
 public class WinImageDrop : MonoBehaviour
 {
@@ -55,7 +58,15 @@ public class WinImageDrop : MonoBehaviour
                 dropAmount = Mathf.Lerp(0.0f, m_dropAmountDip, prop);
             }
 
-            pos.y += dropAmount * Screen.height;
+
+            float screenHeight = (float)Screen.height;
+#if UNITY_EDITOR
+            string[] res = UnityStats.screenRes.Split('x');
+            screenHeight = (float)int.Parse(res[1]);
+#endif
+
+
+            pos.y += dropAmount * screenHeight;
 
         }
 
