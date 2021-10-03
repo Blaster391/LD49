@@ -31,14 +31,11 @@ public class ChemicalStore : MonoBehaviour
     {
         uint correctCount = 0;
 
-        if(m_containedChemicals.Count >= m_targetChemicalCount)
+        foreach(var chemical in m_containedChemicals)
         {
-            foreach(var chemical in m_containedChemicals)
+            if(chemical.State == m_targetChemicalType)
             {
-                if(chemical.State == m_targetChemicalType)
-                {
-                    correctCount++;
-                }
+                correctCount++;
             }
         }
 
