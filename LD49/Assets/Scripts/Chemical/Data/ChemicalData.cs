@@ -9,11 +9,13 @@ public class ChemicalData : ScriptableObject
     [SerializeField] private float m_mass;
     [SerializeField] private float m_scale;
     [SerializeField] private Color m_color;
+    [SerializeField] private MatterState m_matterState;
 
     public string Name => m_name;
     public float Mass { get { return m_mass; } }
     public float Scale { get { return m_scale; } }
     public Color Color { get { return m_color; } }
+    public MatterState MatterState { get { return m_matterState; } }
 
     [System.Serializable]
     public struct TemperatureReaction
