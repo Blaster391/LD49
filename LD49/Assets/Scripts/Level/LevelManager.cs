@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
+    private bool m_isLevel = true;
+
+
+    [SerializeField]
     private string m_nextLevel;
 
     [SerializeField]
@@ -33,6 +37,11 @@ public class LevelManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R)) // TODO maybe R bad?
         {
             RestartLevel();
+        }
+
+        if(!m_isLevel)
+        {
+            return;
         }
 
         if (!m_complete && !m_gameOver)
@@ -114,5 +123,10 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    public void QuitGame()
+    {
+
     }
 }

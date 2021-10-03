@@ -21,9 +21,9 @@ public class Valve : MonoBehaviour
         var rigidbody = gameObject.GetComponent<Rigidbody2D>();
         float rotation = 0.0f;
 
-        if(m_startEnabled || (!m_startEnabled && m_invert))
+        if((m_startEnabled && !m_invert) || (!m_startEnabled && m_invert))
         {
-            rotation = -m_maxRotation + 1;
+            rotation = -m_maxRotation;
         }
         else
         {
