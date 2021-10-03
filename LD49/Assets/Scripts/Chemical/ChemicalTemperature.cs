@@ -18,20 +18,26 @@ public class ChemicalTemperature : MonoBehaviour, IChemicalTemperature
 
     private void Update()
     {
-        AlterTemperature(-m_coolingPerSecond * Time.deltaTime);
+        // Cool toward zero
+        if (m_temperature > 0f)
+        {
+            AlterTemperature(-Mathf.Min(m_coolingPerSecond * Time.deltaTime, m_temperature));
+        }
+        else if (m_temperature < 0f)
+        {
+            AlterTemperature(Mathf.Min(m_coolingPerSecond * Time.deltaTime, m_temperature));
+        }
 
-        // See if we need to change
-        float currentBaseTemp = 0f;
+        // See if we need to change state
         foreach (ChemicalData.TemperatureReaction tempReaction in m_chemicalStateIF.State.TemperatureReactions)
         {
-            if (m_temperature >= currentBaseTemp && m_temperature < tempReaction.m_upperBound)
+            if (m_temperature >= tempReaction.m_lowerBound && m_temperature < tempReaction.m_upperBound)
             {
                 if (tempReaction.m_result != null && tempReaction.m_result != m_chemicalStateIF.State)
                 {
                     m_chemicalStateIF.ChangeState(tempReaction.m_result);
                 }
             }
-            currentBaseTemp = tempReaction.m_upperBound;
         }
     }
     #endregion
@@ -40,7 +46,7 @@ public class ChemicalTemperature : MonoBehaviour, IChemicalTemperature
     public float Temperature => m_temperature;
     public float AlterTemperature(float i_change)
     {
-        m_temperature = Mathf.Clamp(m_temperature + i_change, 0f, m_maxTemperature);
+        m_temperature = Mathf.Clamp(m_temperature + i_change, -m_maxTemperature, m_maxTemperature);
         return m_temperature;
     }
     #endregion

@@ -18,6 +18,7 @@ public class ChemicalData : ScriptableObject
     [System.Serializable]
     public struct TemperatureReaction
     {
+        public float m_lowerBound;
         public float m_upperBound;
         public ChemicalData m_result;
     }

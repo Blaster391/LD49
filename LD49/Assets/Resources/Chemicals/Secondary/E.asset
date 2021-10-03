@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: E
   m_EditorClassIdentifier: 
   m_name: Yellow
-  m_mass: 0.05
-  m_scale: 0.25
+  m_mass: 2
+  m_scale: 1
   m_color: {r: 0.9467213, g: 1, b: 0, a: 1}
   m_temperatureReactions:
-  - m_upperBound: 10
-    m_result: {fileID: 11400000, guid: 72ccb0690f14cf14fa8846e2afec2e2a, type: 2}
+  - m_lowerBound: 8
+    m_upperBound: 10
+    m_result: {fileID: 11400000, guid: f28b54118b407ba4381e832a594f2f8d, type: 2}
