@@ -21,6 +21,6 @@ MonoBehaviour:
   - m_lowerBound: -10
     m_upperBound: -8
     m_result: {fileID: 11400000, guid: 72ccb0690f14cf14fa8846e2afec2e2a, type: 2}
-  - m_lowerBound: 20
-    m_upperBound: 30
+  - m_lowerBound: 10
+    m_upperBound: 15
     m_result: {fileID: 11400000, guid: 1dab07770308581479bd64588dd8bd9c, type: 2}
