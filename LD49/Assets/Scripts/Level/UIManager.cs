@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     private Color m_fadeColor;
 
     [SerializeField]
-    private TextMeshProUGUI m_levelComplete;
+    private GameObject m_levelComplete;
 
     private LevelManager m_levelManager = null;
 
@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         m_gameOver.gameObject.SetActive(false);
-        m_levelComplete.gameObject.SetActive(false);
+        m_levelComplete.SetActive(false);
         m_gameOverFade.gameObject.SetActive(false);
 
         m_levelManager = GetComponentInParent<LevelManager>();
@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
 
         if (m_levelManager.LevelIsComplete())
         {
-            m_levelComplete.gameObject.SetActive(true);
+            m_levelComplete.SetActive(true);
         }
         else if(m_levelManager.LevelIsFailed())
         {
@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
         else
         {
             m_gameOver.gameObject.SetActive(false);
-            m_levelComplete.gameObject.SetActive(false);
+            m_levelComplete.SetActive(false);
             m_gameOverFade.gameObject.SetActive(false);
 
             //m_timer.gameObject.SetActive(true);
@@ -106,6 +106,6 @@ public class UIManager : MonoBehaviour
 
     public void NextLevel()
     {
-
+        m_levelManager.NextLevel();
     }
 }
