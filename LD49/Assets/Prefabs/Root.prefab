@@ -86,8 +86,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isLevel: 1
   m_nextLevel: JackTest
+  m_levelNumber: 0
   m_timeLimit: 61
   m_explosionPrefab: {fileID: 4009955268858338764, guid: ddd96add20664d1498eb7337e0a4890d, type: 3}
+  m_levelCompleteClip: {fileID: 8300000, guid: a176a2984fb8b264c82ee01fe65c692d, type: 3}
+  m_levelLoseClip: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
 --- !u!114 &7993613363435577934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bgmSource: {fileID: 5761063339149908400}
-  m_sources: []
+  m_sourcePrefab: {fileID: 3056409802423699401, guid: 162c63ef4f3866b44a0f7fbc39bfa547, type: 3}
+  m_maxSounds: 10
 --- !u!82 &5761063339149908400
 AudioSource:
   m_ObjectHideFlags: 0

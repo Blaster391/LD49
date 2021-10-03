@@ -21,6 +21,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject m_explosionPrefab;
 
+    [SerializeField]
+    private AudioClip m_levelCompleteClip;
+    [SerializeField]
+    private AudioClip m_levelLoseClip;
+
     private float m_timeLeft = 0.0f;
 
     private List<ChemicalStore> m_stores = new List<ChemicalStore>();
@@ -28,10 +33,12 @@ public class LevelManager : MonoBehaviour
     private bool m_gameOver = false;
     private float m_gameOverTime = 0.0f;
     private float m_completeTime = 0.0f;
+    private SoundManager m_sound = null;
 
     private void Start()
     {
         m_timeLeft = m_timeLimit;
+        m_sound = GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -55,6 +62,12 @@ public class LevelManager : MonoBehaviour
         if (!m_complete && !m_gameOver)
         {
             m_complete = m_stores.TrueForAll(x => x.IsComplete());
+
+            if(m_complete)
+            {
+                m_sound.StopBGM();
+                m_sound.PlaySound(m_levelCompleteClip, true);
+            }
         }
 
         if (m_complete)
@@ -119,6 +132,11 @@ public class LevelManager : MonoBehaviour
         {
             m_gameOver = true;
             Instantiate<GameObject>(m_explosionPrefab, _explosionEffect, Quaternion.identity, transform);
+
+
+            m_sound.StopBGM();
+            m_sound.PlaySound(m_levelLoseClip, true);
+            
         }
 
     }

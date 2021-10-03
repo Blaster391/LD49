@@ -38,8 +38,6 @@ public class EndGameFade : MonoBehaviour
                 prop = Mathf.Clamp01(prop);
 
                 m_image.color = Color.Lerp(m_fromColor, m_toColor, prop);
-
-                Debug.Log(prop);
             }
             else
             {
