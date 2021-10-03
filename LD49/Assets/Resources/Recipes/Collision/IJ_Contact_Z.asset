@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e41632c99c3022a4bb838567b2c9fa9b, type: 3}
-  m_Name: AB-D_Level1
+  m_Name: IJ_Contact_Z
   m_EditorClassIdentifier: 
-  m_unlockLevel: 1
-  m_order: 0
-  m_reaction: {fileID: 11400000, guid: 0b060d170fa1e074c94e315008084601, type: 2}
+  m_unlockLevel: 0
+  m_reaction: {fileID: 11400000, guid: 24260a781230da24da059052af05c1fc, type: 2}
   m_uiPrefab: {fileID: 4821902563158781601, guid: 902aea99d2b02184390994d2cfa2c8b0, type: 3}

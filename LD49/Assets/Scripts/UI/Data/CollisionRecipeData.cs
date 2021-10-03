@@ -15,4 +15,6 @@ public class CollisionRecipeData : BaseRecipeData
         ui.InitialiseRecipie(m_reaction.ChemicalA, m_reaction.ChemicalB, m_reaction.ChemicalResult);
         return ui.gameObject;
     }
+    public override ChemicalData[] Ingredients => new ChemicalData[] { m_reaction.ChemicalA, m_reaction.ChemicalB };
+    public override ChemicalData Result => m_reaction.ChemicalResult;
 }

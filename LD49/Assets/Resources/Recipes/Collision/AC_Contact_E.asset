@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e41632c99c3022a4bb838567b2c9fa9b, type: 3}
-  m_Name: AC-E_Level2
+  m_Name: AC_Contact_E
   m_EditorClassIdentifier: 
-  m_unlockLevel: 2
-  m_order: 1
+  m_unlockLevel: 0
   m_reaction: {fileID: 11400000, guid: aeba2eae0b8478847a680ab4c9874f0d, type: 2}
   m_uiPrefab: {fileID: 4821902563158781601, guid: 902aea99d2b02184390994d2cfa2c8b0, type: 3}

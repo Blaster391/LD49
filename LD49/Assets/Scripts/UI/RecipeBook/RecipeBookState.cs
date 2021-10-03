@@ -8,6 +8,10 @@ public class RecipeBookState : MonoBehaviour
     [SerializeField] private Button m_openCloseButton = null;
     [SerializeField] private AnimationCurve m_openingCurve;
 
+    [SerializeField] private Image m_arrowImage;
+    [SerializeField] private Sprite m_openArrow;
+    [SerializeField] private Sprite m_closeArrow;
+
     private RectTransform m_rectTransform = null;
 
     // State
@@ -48,6 +52,7 @@ public class RecipeBookState : MonoBehaviour
     private void OnOpenCloseClicked()
     {
         m_open = !m_open;
+        m_arrowImage.sprite = m_open ? m_closeArrow : m_openArrow;
     }
     #endregion
 }
