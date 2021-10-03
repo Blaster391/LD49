@@ -58,7 +58,10 @@ public class LevelManager : MonoBehaviour
         else
         {
             m_timeLeft -= Time.deltaTime;
-            m_gameOver = m_timeLeft < 0.0f;
+            if(m_timeLeft < 0.0f)
+            {
+                TriggerGameOver(Vector3.zero);
+            }
         }
     }
 
@@ -79,7 +82,7 @@ public class LevelManager : MonoBehaviour
 
     public float TimeLeft()
     {
-        return m_timeLeft;
+        return Mathf.Max(0.0f, m_timeLeft);
     }
 
     public float GameOverTime()
