@@ -39,7 +39,7 @@ public class GlassCollideSound : MonoBehaviour
             if(source != null)
             {
                 source.pitch = Random.Range(m_minPitch, m_maxPitch);
-                source.volume = Random.Range(m_minVolume, m_maxVolume);
+                source.volume = PlayerPrefs.GetFloat("Volume") * Random.Range(m_minVolume, m_maxVolume);
             }
         }
     }
