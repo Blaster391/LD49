@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IChemicalTemperature
+public interface ITemperature
 {
     float Temperature { get; }
+    float HeatProp { get; }
+    float CoolProp { get; }
     float AlterTemperature(float i_change);
 }

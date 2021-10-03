@@ -13,7 +13,7 @@ public class ChemicalVibration : MonoBehaviour
     [SerializeField] private float m_vibrationMaxTime = 0.25f;
 
     private Rigidbody2D m_rigidbody = null;
-    private IChemicalTemperature m_chemicalTempIF = null;
+    private ITemperature m_chemicalTempIF = null;
 
     private float m_vibrationDelay = 0f;
 
@@ -21,7 +21,7 @@ public class ChemicalVibration : MonoBehaviour
     void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
-        m_chemicalTempIF = GetComponent<IChemicalTemperature>();
+        m_chemicalTempIF = GetComponent<ITemperature>();
     }
 
     void Update()

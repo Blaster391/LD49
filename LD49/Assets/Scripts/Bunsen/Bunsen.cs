@@ -10,24 +10,21 @@ public class Bunsen : MonoBehaviour, IBunsenControl
     [SerializeField] [Range(0, 1)] private float m_power = 0f;
     [SerializeField] [Range(1, 50)] private float m_temperatureChangePerSecond = 2f;
 
-    private BunsenHeatedArea m_heatedArea = null;
+    private ContainerTrackingArea m_heatedArea = null;
 
     #region Unity
     private void Awake()
     {
-        m_heatedArea = GetComponentInChildren<BunsenHeatedArea>();
+        m_heatedArea = GetComponentInChildren<ContainerTrackingArea>();
     }
 
     private void Update()
     {
         if(m_power > 0f)
         {
-            foreach(Container container in m_heatedArea.HeatedContainers)
+            foreach(Container container in m_heatedArea.Containers)
             {
-                foreach(Chemical chemical in container.Contents.ContainedParticles)
-                {
-                    chemical.Temperature.AlterTemperature(m_power * m_temperatureChangePerSecond * Time.deltaTime);
-                }
+                container.Temperature.AlterTemperature(m_power * m_temperatureChangePerSecond * Time.deltaTime);
             }
         }
     }

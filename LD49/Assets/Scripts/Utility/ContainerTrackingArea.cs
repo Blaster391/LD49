@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class BunsenHeatedArea : MonoBehaviour
+public class ContainerTrackingArea : MonoBehaviour
 {
     [Header("Visible for runtime debugging")]
-    [SerializeField] private List<Container> m_heatedContainers = new List<Container>();
-    public List<Container> HeatedContainers => new List<Container>(m_heatedContainers);
+    [SerializeField] private List<Container> m_containers = new List<Container>();
+    public List<Container> Containers => new List<Container>(m_containers);
 
     #region Unity
     private void OnTriggerEnter2D(Collider2D m_collider)
@@ -15,7 +15,7 @@ public class BunsenHeatedArea : MonoBehaviour
         Container container = m_collider.gameObject.GetComponent<Container>();
         if (container != null)
         {
-            m_heatedContainers.Add(container);
+            m_containers.Add(container);
         }
     }
 
@@ -24,7 +24,7 @@ public class BunsenHeatedArea : MonoBehaviour
         Container container = m_collider.gameObject.GetComponent<Container>();
         if (container != null)
         {
-            m_heatedContainers.Remove(container);
+            m_containers.Remove(container);
         }
     }
     #endregion

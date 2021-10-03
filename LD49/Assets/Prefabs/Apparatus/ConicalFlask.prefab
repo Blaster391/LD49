@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4615442908628103381}
   - component: {fileID: 4615442908628103380}
   - component: {fileID: 1925286585310039177}
+  - component: {fileID: 6744161904631265025}
   m_Layer: 0
   m_Name: ConicalFlask
   m_TagString: Untagged
@@ -198,6 +199,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794cf21e1ac9b6a4ba2e6e24826b5e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6744161904631265025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4615442908628103379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38c89a4122e89f449c82a1e7ae49d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_temperature: 0
+  m_maxTemperature: 15
+  m_coolingPerSecond: 2
+  m_heatTransferMult: 0.6
+  m_spriteRenderer: {fileID: 4615442908628103382}
+  m_coolColor: {r: 0, g: 1, b: 1, a: 1}
+  m_hotColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4615442908735267748
 GameObject:
   m_ObjectHideFlags: 0
