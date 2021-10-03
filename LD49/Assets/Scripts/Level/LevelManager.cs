@@ -125,6 +125,21 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 
+    public void ToggleSound()
+    {
+        if (!PlayerPrefs.HasKey("Sound") || PlayerPrefs.GetInt("Sound") == 1)
+        {
+            PlayerPrefs.SetInt("Sound", 0);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+
+
+        PlayerPrefs.Save();
+    }
+
     public void QuitGame()
     {
 
