@@ -88,9 +88,13 @@ MonoBehaviour:
   m_nextLevel: JackTest
   m_levelNumber: 0
   m_timeLimit: 61
+  m_alarmLightTime: 1
+  m_alarmBGMFadeTime: 2
+  m_alarmColor: {r: 0.7264151, g: 0, b: 0, a: 1}
   m_explosionPrefab: {fileID: 4009955268858338764, guid: ddd96add20664d1498eb7337e0a4890d, type: 3}
   m_levelCompleteClip: {fileID: 8300000, guid: a176a2984fb8b264c82ee01fe65c692d, type: 3}
   m_levelLoseClip: {fileID: 8300000, guid: 29c323033e1c68f46a73c7f95cc530ea, type: 3}
+  m_alarmClip: {fileID: 8300000, guid: e3727c081e0e9514897e9879a62a5aa6, type: 3}
 --- !u!114 &7993613363435577934
 MonoBehaviour:
   m_ObjectHideFlags: 0

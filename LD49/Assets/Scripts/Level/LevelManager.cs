@@ -8,7 +8,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private bool m_isLevel = true;
 
-
     [SerializeField]
     private string m_nextLevel;
 
@@ -19,12 +18,24 @@ public class LevelManager : MonoBehaviour
     private float m_timeLimit = 61.0f;
 
     [SerializeField]
+    private float m_alarmLightTime = 1.0f;
+    [SerializeField]
+    private float m_alarmBGMFadeTime = 2.0f;
+    [SerializeField]
+    private Color m_alarmColor;
+    private Color m_regularColor;
+
+    [SerializeField]
     private GameObject m_explosionPrefab;
 
     [SerializeField]
     private AudioClip m_levelCompleteClip;
     [SerializeField]
     private AudioClip m_levelLoseClip;
+    [SerializeField]
+    private AudioClip m_alarmClip;
+
+
 
     private float m_timeLeft = 0.0f;
 
@@ -35,10 +46,18 @@ public class LevelManager : MonoBehaviour
     private float m_completeTime = 0.0f;
     private SoundManager m_sound = null;
 
+    private AudioSource m_alarm;
+    private bool m_alarmLight = false;
+    private float m_alarmLightTimer = 0.0f;
+    private float m_alarmBGMProp = 1.0f;
+    private Camera m_camera;
+
     private void Start()
     {
         m_timeLeft = m_timeLimit;
         m_sound = GetComponent<SoundManager>();
+        m_camera = Camera.main;
+        m_regularColor = m_camera.backgroundColor;
     }
 
     // Update is called once per frame
@@ -65,8 +84,15 @@ public class LevelManager : MonoBehaviour
 
             if(m_complete)
             {
+                StopAlarm();
                 m_sound.StopBGM();
                 m_sound.PlaySound(m_levelCompleteClip, true);
+
+                StopAlarm();
+            }
+            else
+            {
+                UpdateAlarm();
             }
         }
 
@@ -130,6 +156,7 @@ public class LevelManager : MonoBehaviour
     {
         if(!m_gameOver)
         {
+            StopAlarm();
             m_gameOver = true;
             Instantiate<GameObject>(m_explosionPrefab, _explosionEffect, Quaternion.identity, transform);
 
@@ -175,6 +202,46 @@ public class LevelManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("Volume", i_volume);
         PlayerPrefs.Save();
+    }
+
+    public void UpdateAlarm()
+    {
+        if(m_alarm == null)
+        {
+            if(TimeLeft() < m_alarmClip.length)
+            {
+                m_alarm = m_sound.PlaySound(m_alarmClip, true);
+            }
+        }
+        else
+        {
+            m_alarmBGMProp -= Time.deltaTime * (1 / m_alarmBGMFadeTime);
+            m_alarmBGMProp = Mathf.Clamp01(m_alarmBGMProp);
+            m_sound.SetBGMVolume(m_alarmBGMProp);
+
+            m_alarmLightTimer -= Time.deltaTime;
+            if (m_alarmLightTimer < 0.0f)
+            {
+                m_alarmLight = !m_alarmLight;
+
+                if(m_alarmLight)
+                {
+                    m_camera.backgroundColor = m_alarmColor;
+                }
+                else
+                {
+                    m_camera.backgroundColor = m_regularColor;
+                }
+
+                m_alarmLightTimer = m_alarmLightTime;
+            }
+        }
+    }
+
+    public void StopAlarm()
+    {
+        m_alarm.Stop();
+        m_camera.backgroundColor = m_regularColor;
     }
 
     public void QuitGame()

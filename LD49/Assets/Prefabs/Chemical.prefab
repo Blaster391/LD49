@@ -347,6 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111f6b5c60dd3de458fac243575e2ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_collision: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
+  m_collision: {fileID: 8300000, guid: 3214d80044676de4c884b8560221adb1, type: 3}
   m_heat: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
-  m_cool: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
+  m_cool: {fileID: 8300000, guid: f08121b5eb95b9b46b21cfe3ab31bc28, type: 3}

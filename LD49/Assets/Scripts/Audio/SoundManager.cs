@@ -77,4 +77,9 @@ public class SoundManager : MonoBehaviour
     {
         m_bgmSource.Stop();
     }
+
+    public void SetBGMVolume(float _volume)
+    {
+        m_bgmSource.volume = _volume * PlayerPrefs.GetFloat("Volume");
+    }
 }
