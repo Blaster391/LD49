@@ -16,6 +16,9 @@ public class ChemicalSpawner : MonoBehaviour
     private float m_minValveThreshold = 0.25f;
     [SerializeField]
     private float m_spawnTime = 1.0f;
+    [SerializeField]
+    private GameObject m_spawnPoint;
+
 
     private float m_lastSpawnTime = 0.0f;
     private int m_spawnCount = 0;
@@ -45,7 +48,7 @@ public class ChemicalSpawner : MonoBehaviour
     {
         m_lastSpawnTime = 0.0f;
 
-        GameObject chemical = Instantiate<GameObject>(m_prefab, transform.position, transform.rotation, transform);
+        GameObject chemical = Instantiate<GameObject>(m_prefab, m_spawnPoint.transform.position, m_spawnPoint.transform.rotation, transform);
         chemical.GetComponent<ChemicalState>().ChangeState(m_chemical);
 
         m_spawnCount++;

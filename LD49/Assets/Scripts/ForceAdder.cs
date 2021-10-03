@@ -20,7 +20,8 @@ public class ForceAdder : MonoBehaviour
     {
         foreach(var chemical in m_chemicals)
         {
-            chemical.AddForce(m_force * Time.deltaTime);
+            Vector3 forceDirection = transform.TransformDirection(m_force);
+            chemical.AddForce(forceDirection * Time.deltaTime);
         }
     }
 
