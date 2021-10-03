@@ -17,4 +17,7 @@ MonoBehaviour:
   m_scale: 1
   m_color: {r: 1, g: 0, b: 0.7932253, a: 1}
   m_matterState: 1
-  m_temperatureReactions: []
+  m_temperatureReactions:
+  - m_lowerBound: -10
+    m_upperBound: -8
+    m_result: {fileID: 11400000, guid: b3b16bdf727b05641a7994dc521ee686, type: 2}
