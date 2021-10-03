@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: Z
   m_EditorClassIdentifier: 
-  m_name: 
-  m_mass: 0
-  m_scale: 0
-  m_color: {r: 0, g: 0, b: 0, a: 0}
+  m_name: Ludumdarium
+  m_mass: 1
+  m_scale: 1
+  m_color: {r: 1, g: 1, b: 1, a: 1}
   m_temperatureReactions: []
