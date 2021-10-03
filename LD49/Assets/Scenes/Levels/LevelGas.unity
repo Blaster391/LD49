@@ -1306,7 +1306,7 @@ PrefabInstance:
     - target: {fileID: 1595506120196948943, guid: 1f9c393d9d1d99646af377af34ebe8a2, type: 3}
       propertyPath: m_targetChemicalType
       value: 
-      objectReference: {fileID: 11400000, guid: a16a050aa89508147a19ce4de8f96eff, type: 2}
+      objectReference: {fileID: 11400000, guid: 6c8952d95b40f624d822e48561beea55, type: 2}
     - target: {fileID: 1595506120196948943, guid: 1f9c393d9d1d99646af377af34ebe8a2, type: 3}
       propertyPath: m_targetChemicalCount
       value: 6
