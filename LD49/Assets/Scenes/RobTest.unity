@@ -384,6 +384,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7536ccf6cf9c7e74a98bc186fdc95ba9, type: 3}
+--- !u!1001 &571408397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1049222720}
+    m_Modifications:
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.97535
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.073649
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 852288838536737723, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651139842523312718, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
+      propertyPath: m_Name
+      value: Stirrer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0aa8c5876d9f0bc458ee554cb747e981, type: 3}
 --- !u!1001 &636879050
 PrefabInstance:
   m_ObjectHideFlags: 0
