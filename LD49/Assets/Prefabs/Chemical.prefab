@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2748663362347231417}
   - component: {fileID: 8658437206048829719}
   - component: {fileID: 7163598255885494096}
+  - component: {fileID: 5586883249633981648}
   - component: {fileID: 513163162468620303}
   - component: {fileID: 5256494963977612534}
   m_Layer: 0
@@ -206,6 +207,20 @@ MonoBehaviour:
   m_temperature: 0
   m_maxTemperature: 15
   m_coolingPerSecond: 1
+--- !u!114 &5586883249633981648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb887ee63821794a9a27bc79460b0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_liquidGravity: 1
+  m_gasGravity: -0.15
 --- !u!114 &513163162468620303
 MonoBehaviour:
   m_ObjectHideFlags: 0

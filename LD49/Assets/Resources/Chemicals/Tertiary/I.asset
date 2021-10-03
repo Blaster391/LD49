@@ -16,4 +16,5 @@ MonoBehaviour:
   m_mass: 1
   m_scale: 1
   m_color: {r: 1, g: 0, b: 0.7932253, a: 1}
+  m_matterState: 1
   m_temperatureReactions: []
