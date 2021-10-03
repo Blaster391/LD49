@@ -22,18 +22,21 @@ public class WinImageDrop : MonoBehaviour
     private LevelManager m_levelManager = null;
 
     private float m_startingY = 0.0f;
+    private RectTransform m_rectTransform = null;
 
     void Start()
     {
-        m_startingY = transform.position.y;
+        m_rectTransform = GetComponent<RectTransform>();
 
         m_levelManager = GetComponentInParent<LevelManager>();
+
+        m_startingY = m_rectTransform.anchoredPosition.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
+        Vector2 pos = m_rectTransform.anchoredPosition;
         pos.y = m_startingY;
 
         if (m_levelManager.LevelIsComplete())
@@ -59,17 +62,11 @@ public class WinImageDrop : MonoBehaviour
             }
 
 
-            float screenHeight = (float)Screen.height;
-#if UNITY_EDITOR
-            string[] res = UnityStats.screenRes.Split('x');
-            screenHeight = (float)int.Parse(res[1]);
-#endif
 
-
-            pos.y += dropAmount * screenHeight;
+            pos.y += dropAmount;
 
         }
 
-        transform.position = pos;
+        m_rectTransform.anchoredPosition = pos;
     }
 }
