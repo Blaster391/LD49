@@ -28,6 +28,8 @@ public class ChemicalCollisionProcessor : MonoBehaviour
             {
                 m_chemicalStateIF.ChangeState(chemicalResult);
                 otherStateIF.ChangeState(chemicalResult);
+
+                GetComponent<ChemicalChangeSound>().CollisionSound();
             }
         }
     }

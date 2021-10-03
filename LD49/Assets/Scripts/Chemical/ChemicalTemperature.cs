@@ -24,6 +24,17 @@ public class ChemicalTemperature : TemperatureComponent
                 if (tempReaction.m_result != null && tempReaction.m_result != m_chemicalStateIF.State)
                 {
                     m_chemicalStateIF.ChangeState(tempReaction.m_result);
+
+
+                    if(Temperature >= tempReaction.m_lowerBound)
+                    {
+                        GetComponent<ChemicalChangeSound>().HeatSound();
+                    }
+                    else
+                    {
+                        GetComponent<ChemicalChangeSound>().CoolSound();
+                    }
+
                 }
             }
         }

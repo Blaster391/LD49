@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 513163162468620303}
   - component: {fileID: 8217828560248363113}
   - component: {fileID: 5256494963977612534}
+  - component: {fileID: 7434029099872519067}
   m_Layer: 0
   m_Name: Chemical
   m_TagString: Untagged
@@ -334,3 +335,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &7434029099872519067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586644000666740284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111f6b5c60dd3de458fac243575e2ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_collision: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
+  m_heat: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}
+  m_cool: {fileID: 8300000, guid: de4aadce38e9dfe42aa1f6bca2096783, type: 3}

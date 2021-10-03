@@ -9,14 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/MainMenu.unity
     guid: f603ac4f65cbaff409c1c9e38c653e1c
   - enabled: 1
-    path: Assets/Scenes/TubeTest.unity
-    guid: d90ec346d9eb4094ca274ff7898883ce
-  - enabled: 1
-    path: Assets/Scenes/RobTest.unity
-    guid: 5684194d3526ba44b84d27a3b30b7712
-  - enabled: 1
-    path: Assets/Scenes/JackTest.unity
-    guid: 7305fde800a1ab24cb204864d3449bba
+    path: Assets/Scenes/Levels/StarterLevel.unity
+    guid: 6d0084c72aede0640875765e77ac32fe
   - enabled: 1
     path: Assets/Scenes/Final/Complete.unity
     guid: d6f6732095ecb444fbfe7afbc64f3aef

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2619618721828559993}
   - component: {fileID: 2619618721828559942}
   - component: {fileID: 2619618721828559943}
+  - component: {fileID: 6745736320552288291}
   m_Layer: 0
   m_Name: Bunsen
   m_TagString: Untagged
@@ -189,6 +190,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_power: 0
   m_temperatureChangePerSecond: 5
+--- !u!114 &6745736320552288291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619618721828559997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b272d077565496e47bfe45509a7af704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bunsenGeneralSound: {fileID: 8300000, guid: 01cf8c4ca93c11645ae6a7f563f4fd4e, type: 3}
+  m_bunsenStartSound: {fileID: 8300000, guid: 8afbfc2c11340b2448050e09d2828c50, type: 3}
+  m_bunsenEndSound: {fileID: 8300000, guid: 3c82176c8bc6f96489c74019e1e9820c, type: 3}
+  m_volumeMod: 1
 --- !u!1 &2619618723120863459
 GameObject:
   m_ObjectHideFlags: 0
