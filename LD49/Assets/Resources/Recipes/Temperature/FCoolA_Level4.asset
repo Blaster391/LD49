@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8552f92b8ec104a418d86fc7137f05d6, type: 3}
+  m_Name: FCoolA_Level4
+  m_EditorClassIdentifier: 
+  m_unlockLevel: 4
+  m_order: 4
+  m_chemicalA: {fileID: 11400000, guid: 7751e8e8bf1134f4b99b175ac95742de, type: 2}
+  m_chemicalB: {fileID: 11400000, guid: 685de268d9f3c084aab374f18b2d550a, type: 2}
+  m_operation: 1
+  m_uiPrefab: {fileID: 4582230434954880891, guid: 09c3f4df097055141bbfee4bc4c48f1e, type: 3}

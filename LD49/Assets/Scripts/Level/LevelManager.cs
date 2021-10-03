@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private string m_nextLevel;
 
+    [SerializeField] private int m_levelNumber = 0;
+    public int LevelNumber => m_levelNumber;
+
     [SerializeField]
     private float m_timeLimit = 61.0f;
 
