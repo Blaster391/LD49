@@ -16,6 +16,9 @@ public class GameOverFloor : MonoBehaviour
         if(chemical != null)
         {
             m_manager.TriggerGameOver(collision.transform.position);
+
+            Destroy(collision.gameObject);
+
         }
     }
 }
