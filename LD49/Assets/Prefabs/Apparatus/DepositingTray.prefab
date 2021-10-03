@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 1595506118406717644}
   - component: {fileID: 1595506118406717645}
   - component: {fileID: 1595506118406718258}
+  - component: {fileID: 2116826586969672741}
   m_Layer: 0
   m_Name: DepositingTray
   m_TagString: Untagged
@@ -378,6 +379,23 @@ PolygonCollider2D:
       - {x: 1.9499999, y: -1.355}
       - {x: 1.9399999, y: -0.305}
       - {x: 1.92, y: -0.205}
+--- !u!114 &2116826586969672741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595506118406718259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f704276757dbc14eb3bb7485bfea8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clip: {fileID: 8300000, guid: ac52944708dd6b54aa90be5eff10250a, type: 3}
+  m_minPitch: 0.5
+  m_maxPitch: 2
+  m_minVolume: 0.5
+  m_maxVolume: 1
 --- !u!1 &1595506120196948530
 GameObject:
   m_ObjectHideFlags: 0

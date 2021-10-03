@@ -1677,6 +1677,7 @@ GameObject:
   - component: {fileID: 1788053780}
   - component: {fileID: 1788053779}
   - component: {fileID: 1788053781}
+  - component: {fileID: 1788053782}
   m_Layer: 0
   m_Name: BendyPipe
   m_TagString: Untagged
@@ -1812,6 +1813,23 @@ PolygonCollider2D:
       - {x: 3.5649998, y: 0.705}
       - {x: 3.355, y: 0.705}
       - {x: 3.3240676, y: 0.518728}
+--- !u!114 &1788053782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788053778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f704276757dbc14eb3bb7485bfea8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_clip: {fileID: 8300000, guid: ac52944708dd6b54aa90be5eff10250a, type: 3}
+  m_minPitch: 0.5
+  m_maxPitch: 2
+  m_minVolume: 0.5
+  m_maxVolume: 1
 --- !u!1001 &1839207692
 PrefabInstance:
   m_ObjectHideFlags: 0
