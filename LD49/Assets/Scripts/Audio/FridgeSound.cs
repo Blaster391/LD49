@@ -13,7 +13,7 @@ public class FridgeSound : MonoBehaviour
     private void Start()
     {
         AudioSource source = GetComponentInParent<SoundManager>().PlaySound(m_clip, true);
-        source.volume = m_volume;
+        source.volume = m_volume * PlayerPrefs.GetFloat("Volume");
         source.loop = true;
     }
 

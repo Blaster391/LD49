@@ -12,6 +12,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/StarterLevel.unity
     guid: 6d0084c72aede0640875765e77ac32fe
   - enabled: 1
+    path: Assets/Scenes/Levels/LevelValves.unity
+    guid: 55a421454aa918043a1d175e0bd8f77a
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelTube.unity
+    guid: 45c4c4a6c1ecaaf4b830348880efe2e6
+  - enabled: 1
     path: Assets/Scenes/Final/Complete.unity
     guid: d6f6732095ecb444fbfe7afbc64f3aef
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelAdvanced1.unity
+    guid: 82e22a0138dd5254ba210990dc33d557
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelBrown.unity
+    guid: 851c6a26046b79b428346f4ec15473ed
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelLudumium.unity
+    guid: da9050be4fa45404897e62e13e180153
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelTower.unity
+    guid: 3ec4d598783794f4ca966c9e3bba5f9a
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelBunsen.unity
+    guid: 43b5ed2db5b5e7b46b7abc5f46b6e6b7
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelCatch.unity
+    guid: e8b98c7e154bbfb43816880a6a61f3ff
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelGas.unity
+    guid: 7a38d4971d92a4e43a36966b0fc07645
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelFridge.unity
+    guid: 57dc20d4a4df4254592020db9a9599ea
   m_configObjects: {}
