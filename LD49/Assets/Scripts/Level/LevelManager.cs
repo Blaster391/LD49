@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class LevelManager : MonoBehaviour
 {
@@ -84,11 +85,7 @@ public class LevelManager : MonoBehaviour
 
             if(m_complete)
             {
-                StopAlarm();
-                m_sound.StopBGM();
-                m_sound.PlaySound(m_levelCompleteClip, true);
-
-                StopAlarm();
+                CompleteLevel();
             }
             else
             {
@@ -152,6 +149,22 @@ public class LevelManager : MonoBehaviour
         return m_completeTime;
     }
 
+    private void CompleteLevel()
+    {
+        StopAlarm();
+        m_sound.StopBGM();
+        m_sound.PlaySound(m_levelCompleteClip, true);
+        StopAlarm();
+
+        string eventName = "LevelComplete";
+        IDictionary<string, object> eventData = new Dictionary<string, object>();
+        eventData.Add("Level", SceneManager.GetActiveScene().name);
+        eventData.Add("LevelNumber", m_levelNumber);
+        eventData.Add("TimeLeft", m_timeLeft);
+
+        Analytics.CustomEvent(eventName, eventData);
+    }
+
     public void TriggerGameOver(Vector3 _explosionEffect)
     {
         if(!m_gameOver)
@@ -163,7 +176,15 @@ public class LevelManager : MonoBehaviour
 
             m_sound.StopBGM();
             m_sound.PlaySound(m_levelLoseClip, true);
-            
+
+
+            string eventName = "GameOver";
+            IDictionary<string, object> eventData = new Dictionary<string, object>();
+            eventData.Add("Level", SceneManager.GetActiveScene().name);
+            eventData.Add("LevelNumber", m_levelNumber);
+            eventData.Add("TimeLeft", m_timeLeft);
+
+            Analytics.CustomEvent(eventName, eventData);
         }
 
     }
@@ -240,8 +261,11 @@ public class LevelManager : MonoBehaviour
 
     public void StopAlarm()
     {
-        m_alarm.Stop();
-        m_camera.backgroundColor = m_regularColor;
+        if(m_alarm != null)
+        {
+            m_alarm.Stop();
+            m_camera.backgroundColor = m_regularColor;
+        }
     }
 
     public void QuitGame()
