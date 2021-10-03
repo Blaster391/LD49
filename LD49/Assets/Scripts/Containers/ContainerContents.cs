@@ -13,7 +13,6 @@ public class ContainerContents : MonoBehaviour
         if (chemical != null)
         {
             m_containedParticles.Add(chemical);
-            Debug.Log($"Chemical {m_collider.gameObject.name} entered {gameObject.name} container.");
         }
     }
 
@@ -23,7 +22,6 @@ public class ContainerContents : MonoBehaviour
         if (chemical != null)
         {
             m_containedParticles.Remove(chemical);
-            Debug.Log($"Chemical {m_collider.gameObject.name} left {gameObject.name} container.");
         }
     }
 }

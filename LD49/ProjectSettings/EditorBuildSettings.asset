@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JackTest.unity
     guid: 7305fde800a1ab24cb204864d3449bba
+  - enabled: 1
+    path: Assets/Scenes/Final/Complete.unity
+    guid: d6f6732095ecb444fbfe7afbc64f3aef
   m_configObjects: {}
