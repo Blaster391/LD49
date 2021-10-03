@@ -37,12 +37,17 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R)) // TODO maybe R bad?
+        if(Input.GetKeyDown(KeyCode.R))
         {
             RestartLevel();
         }
 
-        if(!m_isLevel)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MainMenu();
+        }
+
+        if (!m_isLevel)
         {
             return;
         }
@@ -118,6 +123,11 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+
     public void NextLevel()
     {
         SceneManager.LoadScene(m_nextLevel, LoadSceneMode.Single);
@@ -146,5 +156,11 @@ public class LevelManager : MonoBehaviour
     public void QuitGame()
     {
 
+#if UNITY_WEBGL
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+#else
+        Application.Quit();
+#endif
+        
     }
 }
