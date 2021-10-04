@@ -1595,6 +1595,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableValve H
       objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundUpper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundLower
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
 --- !u!1001 &669963872
@@ -1999,6 +2023,22 @@ PrefabInstance:
     - target: {fileID: 5510622314446796366, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
       propertyPath: m_Name
       value: GrabbableValve H (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
@@ -3705,6 +3745,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableValve H (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundLower
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundUpper
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
 --- !u!1001 &1895168028
@@ -3921,6 +3985,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabbableValve H (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundLower
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundUpper
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
 --- !u!1001 &2023316711
@@ -4050,6 +4138,30 @@ PrefabInstance:
     - target: {fileID: 5510622314446796366, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
       propertyPath: m_Name
       value: GrabbableValve H (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_freezeY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundLower
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133713463509880917, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
+      propertyPath: m_moveBoundUpper
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5791264e99862cf44b13b10f83721b18, type: 3}
@@ -4388,7 +4500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5156958929555235652, guid: 084b1c972d5216b4c9783fd08c8dcaf7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0007324219
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 5191843706829084920, guid: 084b1c972d5216b4c9783fd08c8dcaf7, type: 3}
       propertyPath: m_IsActive
