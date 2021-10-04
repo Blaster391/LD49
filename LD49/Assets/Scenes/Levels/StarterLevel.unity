@@ -294,7 +294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bb99c9d5bdeaedc4d92044feb3b22565, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -324,6 +324,10 @@ PrefabInstance:
     - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2202156233904397210, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_chemical
@@ -706,6 +710,10 @@ PrefabInstance:
     - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4208431882105179491, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,7 +1508,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ecc37246a90336e49b4aff55e6a555f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1677,6 +1685,10 @@ PrefabInstance:
     - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 288378025665055060, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2202156233904397210, guid: c0f142829342c1b4b80e0ae35c4327c8, type: 3}
       propertyPath: m_chemical
