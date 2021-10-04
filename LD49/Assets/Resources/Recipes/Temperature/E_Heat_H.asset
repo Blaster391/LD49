@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8552f92b8ec104a418d86fc7137f05d6, type: 3}
   m_Name: E_Heat_H
   m_EditorClassIdentifier: 
-  m_unlockLevel: 99
+  m_unlockLevel: 3
   m_chemical: {fileID: 11400000, guid: b3375fc6b73c40143814383c6c6ee99c, type: 2}
   m_operation: 0
   m_chemicalResult: {fileID: 11400000, guid: f28b54118b407ba4381e832a594f2f8d, type: 2}

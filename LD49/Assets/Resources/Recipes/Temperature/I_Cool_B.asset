@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8552f92b8ec104a418d86fc7137f05d6, type: 3}
   m_Name: I_Cool_B
   m_EditorClassIdentifier: 
-  m_unlockLevel: 99
+  m_unlockLevel: 8
   m_chemical: {fileID: 11400000, guid: 6c8952d95b40f624d822e48561beea55, type: 2}
   m_operation: 1
   m_chemicalResult: {fileID: 11400000, guid: b3b16bdf727b05641a7994dc521ee686, type: 2}
