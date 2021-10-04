@@ -15,5 +15,6 @@ MonoBehaviour:
   m_name: Teal
   m_mass: 3
   m_scale: 1
-  m_color: {r: 0.4009434, g: 0.93968946, b: 1, a: 1}
+  m_color: {r: 0.0047169924, g: 0.98048496, b: 1, a: 1}
+  m_matterState: 0
   m_temperatureReactions: []

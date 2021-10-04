@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Orange
   m_mass: 1
   m_scale: 0.8
-  m_color: {r: 1, g: 0.71623844, b: 0, a: 1}
+  m_color: {r: 1, g: 0.58280706, b: 0, a: 1}
   m_matterState: 0
   m_temperatureReactions:
   - m_lowerBound: -15

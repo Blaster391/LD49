@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Yellow
   m_mass: 2
   m_scale: 1
-  m_color: {r: 0.9467213, g: 1, b: 0, a: 1}
+  m_color: {r: 1, g: 1, b: 0, a: 1}
   m_matterState: 0
   m_temperatureReactions:
   - m_lowerBound: 12

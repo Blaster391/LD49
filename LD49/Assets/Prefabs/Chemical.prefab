@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_temperature: 0
-  m_maxTemperature: 15
+  m_maxTemperature: 25
   m_coolingPerSecond: 1
 --- !u!114 &5586883249633981648
 MonoBehaviour:

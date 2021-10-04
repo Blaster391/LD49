@@ -15,7 +15,7 @@ MonoBehaviour:
   m_name: Purple
   m_mass: 1
   m_scale: 1.2
-  m_color: {r: 0.7264151, g: 0, b: 0.7264151, a: 1}
+  m_color: {r: 0.61105394, g: 0, b: 1, a: 1}
   m_matterState: 0
   m_temperatureReactions:
   - m_lowerBound: -15
