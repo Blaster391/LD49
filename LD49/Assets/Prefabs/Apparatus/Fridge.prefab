@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e28c5e981976741bc4f70d9e79703b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_temperatureChangePerSecond: -5
+  m_temperatureChangePerSecond: -10
 --- !u!114 &8754756796899759344
 MonoBehaviour:
   m_ObjectHideFlags: 0

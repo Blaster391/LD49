@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_power: 0
-  m_temperatureChangePerSecond: 5
+  m_temperatureChangePerSecond: 12
 --- !u!114 &6745736320552288291
 MonoBehaviour:
   m_ObjectHideFlags: 0
