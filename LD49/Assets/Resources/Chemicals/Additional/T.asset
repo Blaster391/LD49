@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: T
   m_EditorClassIdentifier: 
-  m_name: Trash
+  m_name: Pooponium
   m_mass: 1
   m_scale: 1
   m_color: {r: 0.4433962, g: 0.24326916, b: 0, a: 1}
+  m_matterState: 0
   m_temperatureReactions: []

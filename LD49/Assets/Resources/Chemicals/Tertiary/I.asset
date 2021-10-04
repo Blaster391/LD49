@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: I
   m_EditorClassIdentifier: 
-  m_name: Pink
+  m_name: Floatium
   m_mass: 1
   m_scale: 1
-  m_color: {r: 1, g: 0.2688679, b: 0.87873393, a: 1}
+  m_color: {r: 1, g: 0.6745283, b: 0.90868086, a: 1}
   m_matterState: 1
   m_temperatureReactions:
   - m_lowerBound: -15

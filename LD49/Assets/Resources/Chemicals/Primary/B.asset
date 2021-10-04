@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: B
   m_EditorClassIdentifier: 
-  m_name: Blue
+  m_name: Jackium
   m_mass: 1
   m_scale: 1
   m_color: {r: 0, g: 0.3108704, b: 1, a: 1}

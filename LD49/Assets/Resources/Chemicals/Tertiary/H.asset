@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: H
   m_EditorClassIdentifier: 
-  m_name: Dark Green
+  m_name: Iumium
   m_mass: 0.25
   m_scale: 0.75
   m_color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}

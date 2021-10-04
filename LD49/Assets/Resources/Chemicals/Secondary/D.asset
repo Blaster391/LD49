@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11c314b2ad28db4089acbb002e3bc8d, type: 3}
   m_Name: D
   m_EditorClassIdentifier: 
-  m_name: Purple
+  m_name: Stephenium
   m_mass: 1
   m_scale: 1.2
-  m_color: {r: 0.61105394, g: 0, b: 1, a: 1}
+  m_color: {r: 0.53340864, g: 0, b: 1, a: 1}
   m_matterState: 0
   m_temperatureReactions:
   - m_lowerBound: -15
