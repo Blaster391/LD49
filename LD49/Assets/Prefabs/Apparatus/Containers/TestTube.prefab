@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_temperature: 0
   m_maxTemperature: 10
-  m_coolingPerSecond: 2
+  m_coolingPerSecond: 5
   m_heatTransferMult: 0.5
   m_spriteRenderer: {fileID: 2981256725078825274}
   m_coolColor: {r: 0, g: 1, b: 1, a: 1}
@@ -372,3 +372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_adjustCentreOfMass: 1
   m_rotateOnGrab: 0
+  m_moveBoundUpper: 1
+  m_moveBoundLower: 1
+  m_moveSpeed: 1
+  m_moveX: 0
+  m_moveY: 0
+  m_forceMod: 1
+  m_rotateMod: 1
