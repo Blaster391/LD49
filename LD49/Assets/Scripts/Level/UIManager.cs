@@ -101,7 +101,7 @@ public class UIManager : MonoBehaviour
 
     public void QuitToMainMenu()
     {
-
+        m_levelManager.MainMenu();
     }
 
     public void NextLevel()

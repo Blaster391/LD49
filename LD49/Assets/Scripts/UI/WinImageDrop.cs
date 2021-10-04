@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-#if UNITY_EDITOR
 using UnityEngine;
-#endif
 
 public class WinImageDrop : MonoBehaviour
 {
