@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41632c99c3022a4bb838567b2c9fa9b, type: 3}
   m_Name: BC_Contact_F
   m_EditorClassIdentifier: 
-  m_unlockLevel: 0
+  m_unlockLevel: 99
   m_reaction: {fileID: 11400000, guid: 85dee8ebd6c56734f9401ac4ea8295ee, type: 2}
   m_uiPrefab: {fileID: 4821902563158781601, guid: 902aea99d2b02184390994d2cfa2c8b0, type: 3}
